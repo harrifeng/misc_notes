@@ -134,20 +134,23 @@
    + FUNC:WREP:TTAG ON|OFF
    + FUNC:WREP:CTAG?
 
-   + FUNC:WAN:
-   + FUNC:WAN:
-   + FUNC:WAN:
-   + FUNC:WAN:
-   + FUNC:WAN:
-   + FUNC:WAN:
-   + FUNC:WAN:
-   + FUNC:WAN:
-
-
-
-
-
-   
-     
-     
-
+   + FUNC:WAN:MODE TRAC|MASK
+   + FUNC:WAN:SOUR CHAN1|CHAN2
+   + FUNC:WAN:FCUR <number>
+   + FUNC:WAN:TDIS ON|OFF
+   + FUNC:WAN:SET:SST <number>
+   + FUNC:WAN:SET:SSE <number>
+   + FUNC:WAN:SET:SFR <number>
+   + FUNC:WAN:SET:EFR <number>
+   + FUNC:WAN:SET:THR <number>
+   + FUNC:WAN:SET:XMAS <number>
+   + FUNC:WAN:SET:YMAS <number>
+   + FUNC:WAN:SETM
+   + FUNC:WAN:CMAS
+   + FUNC:WAN:STAR
+   + FUNC:WAN:PREV
+   + FUNC:WAN:NEXT
+   + FUNC:WAN:EFC?
+   + FUNC:WAN:ECUR <number>
+   + FUNC:WAN:ECD?
+* 
