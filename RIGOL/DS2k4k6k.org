@@ -36,3 +36,56 @@
    + :BUS[1|2]:IIC:SDA:POL HIGH|LOW
    + :BUS[1|2]:IIC:SDA:THR <thre>
    + :BUS[1|2]:IIC:OFFS <val>
+   + :BUS[1|2]:SPI:SCLK:SOUR CHAN1|CHAN2
+   + :BUS[1|2]:SPI:SCLK:SLOP POS|NEG
+   + :BUS[1|2]:SPI:SCLK:THR <thre>
+   + :BUS[1|2]:SPI:SDA:SOUR CHAN1|CHAN2
+   + :BUS[1|2]:SPI:SDA:SLOP POS|NEG
+   + :BUS[1|2]:SPI:SDA:THR <thre>
+   + :BUS[1|2]:SPI:DBIT <width>
+   + :BUS[1|2]:SPI:END MSB|LSB
+   + :BUS[1|2]:SPI:OFFS <val>
+** Calculate Mode
+   + CALC:ADD:SA CHAN1|CHAN2
+   + CALC:ADD:SB CHAN1|CHAN2
+   + CALC:ADD:INV ON|OFF
+   + CALC:ADD:VSC <scale>
+   + CALC:ADD:VOFF <offs>
+
+   + CALC:SUB:SA CHAN1|CHAN2
+   + CALC:SUB:SB CHAN1|CHAN2
+   + CALC:SUB:INV ON|OFF
+   + CALC:SUB:VSC <scale>
+   + CALC:SUB:VOFF <offs>
+
+   + CALC:MULT:SA CHAN1|CHAN2
+   + CALC:MULT:SB CHAN1|CHAN2
+   + CALC:MULT:INV ON|OFF
+   + CALC:MULT:VSC <scale>
+   + CALC:MULT:VOFF <offs>
+
+   + CALC:DIV:SA CHAN1|CHAN2
+   + CALC:DIV:SB CHAN1|CHAN2
+   + CALC:DIV:INV ON|OFF
+   + CALC:DIV:VSC <scale>
+   + CALC:DIV:VOFF <offs>
+     
+   + CALC:LOG:SA CHAN1|CHAN2
+   + CALC:LOG:SB CHAN1|CHAN2
+   + CALC:LOG:INV ON|OFF
+   + CALC:LOG:VSC <scale>
+   + CALC:LOG:VOFF <offs>
+   + CALC:LOG:OPER AND|OR|NOT|XOR    
+   + CALC:LOG:ATHR <thre>    
+   + CALC:LOG:BTHR <thre>          
+
+   + CALC:ADV:EXPR <expression>
+   + CALC:ADV:INV ON|OFF
+   + CALC:ADV:VAR1 <numeric_value>
+   + CALC:ADV:VAR2 <numeric_value>     
+   + CALC:ADV:VSC <scale>
+   + CALC:ADV:VOFF <offs>
+     
+
+   
+   + SB CHAN1|CHAN2
