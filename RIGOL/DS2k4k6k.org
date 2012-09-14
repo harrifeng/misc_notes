@@ -45,7 +45,7 @@
    + :BUS[1|2]:SPI:DBIT <width>
    + :BUS[1|2]:SPI:END MSB|LSB
    + :BUS[1|2]:SPI:OFFS <val>
-** Calculate Mode
+** Calculate Subsystem
    + CALC:ADD:SA CHAN1|CHAN2
    + CALC:ADD:SB CHAN1|CHAN2
    + CALC:ADD:INV ON|OFF
@@ -85,7 +85,69 @@
    + CALC:ADV:VAR2 <numeric_value>     
    + CALC:ADV:VSC <scale>
    + CALC:ADV:VOFF <offs>
+** Cursor Subsystem
+   + CURS:MODE OFF|MAN|TRAC|AUTO
+   + CURS:MAN:TYPE TIME|AMPL
+   + CURS:MAN:SOUR CHAN1|CHAN2|MATH|NONE
+   + CURS:MAN:TUN SEC|HZ|PERC|DEGR
+   + CURS:MAN:VUN SUN|PERC
+   + CURS:MAN:CAX <ax>
+   + CURS:MAN:CBX <bx>
+   + CURS:MAN:CAY <ay>
+   + CURS:MAN:CBY <by>
+   + CURS:MAN:AXV?
+   + CURS:MAN:AYV?
+   + CURS:MAN:BXV?
+   + CURS:MAN:BYV?
+   + CURS:MAN:XDEL?
+   + CURS:MAN:IXD?
+   + CURS:MAN:YDEL?
      
+   + CURS:TRAC:SOUR1 CHAN1|CHAN2|MATH|NONE
+   + CURS:TRAC:SOUR2 CHAN1|CHAN2|MATH|NONE
+   + CURS:TRAC:CAX <ax>
+   + CURS:TRAC:CBX <bx>
+   + CURS:TRAC:CAY <ay>
+   + CURS:TRAC:CBY <by>
+   + CURS:TRAC:AXV?
+   + CURS:TRAC:AYV?
+   + CURS:TRAC:BXV?
+   + CURS:TRAC:BYV?
+   + CURS:TRAC:XDEL?
+   + CURS:TRAC:IXD?
+   + CURS:TRAC:YDEL?
+
+** Function Subsystem
+   + FUNC:WRM OFF|REC|KEEP|PLAY|ANAL
+   + FUNC:WREC:FEND <frame>
+   + FUNC:WREC:FMAX?
+   + FUNC:WREC:INT <interval>
+   + FUNC:WREC:OPER REC|STOP
+
+   + FUNC:WREP:MODE REP|SING
+   + FUNC:WREP:INT <interval>
+   + FUNC:WREP:FST <frame>
+   + FUNC:WREP:FCUR <frame>
+   + FUNC:WREP:FEND <frame>
+   + FUNC:WREP:FMAX?
+   + FUNC:WREP:OPER PLAY|STOP|PAUS
+   + FUNC:WREP:TTAG ON|OFF
+   + FUNC:WREP:CTAG?
+
+   + FUNC:WAN:
+   + FUNC:WAN:
+   + FUNC:WAN:
+   + FUNC:WAN:
+   + FUNC:WAN:
+   + FUNC:WAN:
+   + FUNC:WAN:
+   + FUNC:WAN:
+
+
+
+
 
    
-   + SB CHAN1|CHAN2
+     
+     
+
