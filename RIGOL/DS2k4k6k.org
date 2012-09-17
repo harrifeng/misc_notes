@@ -117,6 +117,8 @@
    + CURS:TRAC:IXD?
    + CURS:TRAC:YDEL?
 
+** Display Sbusystem
+   + Display commands are NOT supported
 ** Function Subsystem
    + FUNC:WRM OFF|REC|KEEP|PLAY|ANAL
    + FUNC:WREC:FEND <frame>
@@ -153,4 +155,195 @@
    + FUNC:WAN:EFC?
    + FUNC:WAN:ECUR <number>
    + FUNC:WAN:ECD?
-* 
+** LAN Subsystem
+   + Lan commands are not supported
+** Mask Subsystem
+   + MASK:ENAB ON|OFF
+   + MASK:SOUR CHAN1|CHAN2
+   + MASK:OPER RUN|STOP
+   + MASK:MDIS ON|OFF
+   + MASK:SOO  ON|OFF
+   + MASK:OUTP FAIL|FSO
+   + MASK:X    <x>
+   + MASK:Y    <y>
+   + MASK:CRE  
+   + MASK:PASS?
+   + MASK:FAIL?
+   + MASK:TOT?
+   + MASK:RES
+   + MASK:DATA <mask>
+** Measure Subsystem
+   + MEAS:SOUR
+   + MEAS:COUN:SOUR
+   + MEAS:COUN:VAL
+   + MEAS:CLE
+   + MEAS:REC
+   + MEAS:ADIS
+   + MEAS:AMS
+   + MEAS:STAT:DISP
+   + MEAS:STAT:MODE
+   + MEAS:STAT:RES
+   + MEAS:SET:TYPE
+   + MEAS:SET:MAX
+   + MEAS:SET:MID
+   + MEAS:SET:MIN
+   + MEAS:AREA
+   + MEAS:CREG:CAX
+   + MEAS:CREG:CBX
+   + MEAS:HIST:DISP
+   + MEAS:HIST:DMOD
+*** MEAS:FDEL?
+    + MEAS:FDEL:SMAX?
+    + MEAS:FDEL:SMIN?
+    + MEAS:FDEL:SCUR?
+    + MEAS:FDEL:SCUR?
+    + MEAS:FDEL:SAV?
+    + MEAS:FDEL:DEV?
+*** MEAS:FPH?
+    + MEAS:FPH:SMAX?
+    + MEAS:FPH:SMIN?
+    + MEAS:FPH:SCUR?
+    + MEAS:FPH:SCUR?
+    + MEAS:FPH:SAV?
+    + MEAS:FPH:DEV?
+*** MEAS:FREQ?
+    + MEAS:FREQ:SMAX?
+    + MEAS:FREQ:SMIN?
+    + MEAS:FREQ:SCUR?
+    + MEAS:FREQ:SCUR?
+    + MEAS:FREQ:SAV?
+    + MEAS:FREQ:DEV?
+*** MEAS:FTIM?
+    + MEAS:FTIM:SMAX?
+    + MEAS:FTIM:SMIN?
+    + MEAS:FTIM:SCUR?
+    + MEAS:FTIM:SCUR?
+    + MEAS:FTIM:SAV?
+    + MEAS:FTIM:DEV?
+*** MEAS:NDUT?
+    + MEAS:NDUT:SMAX?
+    + MEAS:NDUT:SMIN?
+    + MEAS:NDUT:SCUR?
+    + MEAS:NDUT:SCUR?
+    + MEAS:NDUT:SAV?
+    + MEAS:NDUT:DEV?
+*** MEAS:NWID?
+    + MEAS:NWID:SMAX?
+    + MEAS:NWID:SMIN?
+    + MEAS:NWID:SCUR?
+    + MEAS:NWID:SCUR?
+    + MEAS:NWID:SAV?
+    + MEAS:NWID:DEV?
+*** MEAS:OVER?
+    + MEAS:OVER:SMAX?
+    + MEAS:OVER:SMIN?
+    + MEAS:OVER:SCUR?
+    + MEAS:OVER:SCUR?
+    + MEAS:OVER:SAV?
+    + MEAS:OVER:DEV?
+*** MEAS:PDUT?
+    + MEAS:PDUT:SMAX?
+    + MEAS:PDUT:SMIN?
+    + MEAS:PDUT:SCUR?
+    + MEAS:PDUT:SCUR?
+    + MEAS:PDUT:SAV?
+    + MEAS:PDUT:DEV?
+*** MEAS:PER?
+    + MEAS:PER:SMAX?
+    + MEAS:PER:SMIN?
+    + MEAS:PER:SCUR?
+    + MEAS:PER:SCUR?
+    + MEAS:PER:SAV?
+    + MEAS:PER:DEV?
+*** MEAS:PRES?
+    + MEAS:PRES:SMAX?
+    + MEAS:PRES:SMIN?
+    + MEAS:PRES:SCUR?
+    + MEAS:PRES:SCUR?
+    + MEAS:PRES:SAV?
+    + MEAS:PRES:DEV?
+*** MEAS:PWID?
+    + MEAS:PWID:SMAX?
+    + MEAS:PWID:SMIN?
+    + MEAS:PWID:SCUR?
+    + MEAS:PWID:SCUR?
+    + MEAS:PWID:SAV?
+    + MEAS:PWID:DEV?
+*** MEAS:RTIM?
+    + MEAS:RTIM:SMAX?
+    + MEAS:RTIM:SMIN?
+    + MEAS:RTIM:SCUR?
+    + MEAS:RTIM:SCUR?
+    + MEAS:RTIM:SAV?
+    + MEAS:RTIM:DEV?
+*** MEAS:RDEL?
+    + MEAS:RDEL:SMAX?
+    + MEAS:RDEL:SMIN?
+    + MEAS:RDEL:SCUR?
+    + MEAS:RDEL:SCUR?
+    + MEAS:RDEL:SAV?
+    + MEAS:RDEL:DEV?
+*** MEAS:RPH?
+    + MEAS:RPH:SMAX?
+    + MEAS:RPH:SMIN?
+    + MEAS:RPH:SCUR?
+    + MEAS:RPH:SCUR?
+    + MEAS:RPH:SAV?
+    + MEAS:RPH:DEV?
+*** MEAS:VAMP?
+    + MEAS:VAMP:SMAX?
+    + MEAS:VAMP:SMIN?
+    + MEAS:VAMP:SCUR?
+    + MEAS:VAMP:SCUR?
+    + MEAS:VAMP:SAV?
+    + MEAS:VAMP:DEV?
+*** MEAS:VAVG?
+    + MEAS:VAVG:SMAX?
+    + MEAS:VAVG:SMIN?
+    + MEAS:VAVG:SCUR?
+    + MEAS:VAVG:SCUR?
+    + MEAS:VAVG:SAV?
+    + MEAS:VAVG:DEV?
+*** MEAS:VBAS?
+    + MEAS:VBAS:SMAX?
+    + MEAS:VBAS:SMIN?
+    + MEAS:VBAS:SCUR?
+    + MEAS:VBAS:SCUR?
+    + MEAS:VBAS:SAV?
+    + MEAS:VBAS:DEV?
+*** MEAS:VMAX?
+    + MEAS:VMAX:SMAX?
+    + MEAS:VMAX:SMIN?
+    + MEAS:VMAX:SCUR?
+    + MEAS:VMAX:SCUR?
+    + MEAS:VMAX:SAV?
+    + MEAS:VMAX:DEV?
+*** MEAS:VMIN?
+    + MEAS:VMIN:SMAX?
+    + MEAS:VMIN:SMIN?
+    + MEAS:VMIN:SCUR?
+    + MEAS:VMIN:SCUR?
+    + MEAS:VMIN:SAV?
+    + MEAS:VMIN:DEV?
+*** MEAS:VPP?
+    + MEAS:VPP:SMAX?
+    + MEAS:VPP:SMIN?
+    + MEAS:VPP:SCUR?
+    + MEAS:VPP:SCUR?
+    + MEAS:VPP:SAV?
+    + MEAS:VPP:DEV?
+*** MEAS:VRMS?
+    + MEAS:VRMS:SMAX?
+    + MEAS:VRMS:SMIN?
+    + MEAS:VRMS:SCUR?
+    + MEAS:VRMS:SCUR?
+    + MEAS:VRMS:SAV?
+    + MEAS:VRMS:DEV?
+*** MEAS:VTOP?
+    + MEAS:VTOP:SMAX?
+    + MEAS:VTOP:SMIN?
+    + MEAS:VTOP:SCUR?
+    + MEAS:VTOP:SCUR?
+    + MEAS:VTOP:SAV?
+    + MEAS:VTOP:DEV?
+** 
