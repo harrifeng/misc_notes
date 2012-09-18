@@ -630,22 +630,24 @@
     + CALC:ADV:VSC <scale>
     + CALC:ADV:VOFF <offs>
 ** Channel Subsystem
-   + :CHAN[1|2]:BWL 20M|100M|200M|OFF
-   + :CHAN[1|2]:COUP AC|DC|GND
-   + :CHAN[1|2]:DISP ON|OFF
-   + :CHAN[1|2]:IMP  OMEG|FIFT
-   + :CHAN[1|2]:INV  ON|OFF
-   + :CHAN[1|2]:OFFS <offset>
-   + :CHAN[1|2]:PROB 0.01|0.02|0.05|0.1|0.2|0.5|1|2|5|10|20|50|100|200|500|1000
-   + :CHAN[1|2]:SCAL <scale>
-   + :CHAN[1|2]:TYPE?
-   + :CHAN[1|2]:UNIT VOLT|WATT|AMP|UNKN
-   + :CHAN[1|2]:VERN ON|OFF      
-   + :CHAN[1|2]:BVOL <val>
-   + :CHAN[1|2]:CST
-   + :CHAN[1|2]:CEX
-   + :CHAN[1|2]:PEND SEND|DIFF
+   + :CHAN[1|2|3|4]:BWL 20M|100M|200M|OFF
+   + :CHAN[1|2|3|4]:COUP AC|DC|GND
+   + :CHAN[1|2|3|4]:DISP ON|OFF
+   + :CHAN[1|2|3|4]:IMP  OMEG|FIFT
+   + :CHAN[1|2|3|4]:INV  ON|OFF
+   + :CHAN[1|2|3|4]:OFFS <offset>
+   + :CHAN[1|2|3|4]:PROB 0.01|0.02|0.05|0.1|0.2|0.5|1|2|5|10|20|50|100|200|500|1000
+   + :CHAN[1|2|3|4]:SCAL <scale>
+   + :CHAN[1|2|3|4]:TYPE?
+   + :CHAN[1|2|3|4]:UNIT VOLT|WATT|AMP|UNKN
+   + :CHAN[1|2|3|4]:VERN ON|OFF      
+   + :CHAN[1|2|3|4]:BVOL <val>
+   + :CHAN[1|2|3|4]:CST
+   + :CHAN[1|2|3|4]:CEX
+   + :CHAN[1|2|3|4]:PEND SEND|DIFF
 ** Cursor Subsystem
+   + Cursor Subystem is not supported
+     
    + CURS:MODE OFF|MAN|TRAC|AUTO
    + CURS:MAN:TYPE TIME|AMPL
    + CURS:MAN:SOUR CHAN1|CHAN2|MATH|NONE
@@ -676,82 +678,81 @@
    + CURS:TRAC:XDEL?
    + CURS:TRAC:IXD?
    + CURS:TRAC:YDEL?
-
 ** Display Sbusystem
    + Display commands are NOT supported
 ** Function Subsystem
    + FUNC:WRM OFF|REC|KEEP|PLAY|ANAL
-   + FUNC:WREC:FEND <frame>
-   + FUNC:WREC:FMAX?
-   + FUNC:WREC:INT <interval>
-   + FUNC:WREC:OPER REC|STOP
-
-   + FUNC:WREP:MODE REP|SING
-   + FUNC:WREP:INT <interval>
-   + FUNC:WREP:FST <frame>
-   + FUNC:WREP:FCUR <frame>
-   + FUNC:WREP:FEND <frame>
-   + FUNC:WREP:FMAX?
-   + FUNC:WREP:OPER PLAY|STOP|PAUS
-   + FUNC:WREP:TTAG ON|OFF
-   + FUNC:WREP:CTAG?
-
-   + FUNC:WAN:MODE TRAC|MASK
-   + FUNC:WAN:SOUR CHAN1|CHAN2
-   + FUNC:WAN:FCUR <number>
-   + FUNC:WAN:TDIS ON|OFF
-   + FUNC:WAN:SET:SST <number>
-   + FUNC:WAN:SET:SSE <number>
-   + FUNC:WAN:SET:SFR <number>
-   + FUNC:WAN:SET:EFR <number>
-   + FUNC:WAN:SET:THR <number>
-   + FUNC:WAN:SET:XMAS <number>
-   + FUNC:WAN:SET:YMAS <number>
-   + FUNC:WAN:SETM
-   + FUNC:WAN:CMAS
-   + FUNC:WAN:STAR
-   + FUNC:WAN:PREV
-   + FUNC:WAN:NEXT
-   + FUNC:WAN:EFC?
-   + FUNC:WAN:ECUR <number>
-   + FUNC:WAN:ECD?
+*** FUNC:WREC
+    + FUNC:WREC:FEND <frame>
+    + FUNC:WREC:FMAX?
+    + FUNC:WREC:INT <interval>
+    + FUNC:WREC:OPER REC|STOP
+*** FUNC:WREP
+    + FUNC:WREP:FCUR <frame>
+    + FUNC:WREP:FEND <frame>
+    + FUNC:WREP:FMAX?
+    + FUNC:WREP:FST <frame>
+    + FUNC:WREP:INT <interval>
+    + FUNC:WREP:MODE REP|SING
+    + FUNC:WREP:OPER PLAY|STOP|PAUS
+*** FUNC:WAN
+    + FUNC:WAN:CANC
+    + FUNC:WAN:MODE TRAC|MASK
+    + FUNC:WAN:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + FUNC:WAN:FCUR <number>
+    + FUNC:WAN:TDIS ON|OFF
+    + FUNC:WAN:SETM
+    + FUNC:WAN:CMAS
+    + FUNC:WAN:STAR
+    + FUNC:WAN:PREV
+    + FUNC:WAN:NEXT
+    + FUNC:WAN:EFC?
+    + FUNC:WAN:ECUR <number>
+    + FUNC:WAN:ECD?
+    + FUNC:WAN:SET:SST <number>
+    + FUNC:WAN:SET:SSE <number>
+    + FUNC:WAN:SET:SFR <number>
+    + FUNC:WAN:SET:EFR <number>
+    + FUNC:WAN:SET:THR <number>
+    + FUNC:WAN:SET:XMAS <number>
+    + FUNC:WAN:SET:YMAS <number>
 ** LAN Subsystem
    + Lan commands are not supported
 ** Mask Subsystem
+   + MASK:CRE  
+   + MASK:DATA <mask>
    + MASK:ENAB ON|OFF
-   + MASK:SOUR CHAN1|CHAN2
-   + MASK:OPER RUN|STOP
+   + MASK:FAIL?
    + MASK:MDIS ON|OFF
-   + MASK:SOO  ON|OFF
+   + MASK:OPER RUN|STOP
    + MASK:OUTP FAIL|FSO
+   + MASK:PASS?
+   + MASK:RES
+   + MASK:SOO  ON|OFF
+   + MASK:SOUR CHAN1|CHAN2
+   + MASK:TOT?
    + MASK:X    <x>
    + MASK:Y    <y>
-   + MASK:CRE  
-   + MASK:PASS?
-   + MASK:FAIL?
-   + MASK:TOT?
-   + MASK:RES
-   + MASK:DATA <mask>
 ** Measure Subsystem
-   + MEAS:SOUR
-   + MEAS:COUN:SOUR
-   + MEAS:COUN:VAL
-   + MEAS:CLE
+   + MEAS:ADIS  ON|OFF
+   + MEAS:AREA  SCR|CREG
+   + MEAS:CLE   ITEM1|ITEM2|ITEM3|ITEM4|ITEM5|ALL
    + MEAS:REC
-   + MEAS:ADIS
-   + MEAS:AMS
-   + MEAS:STAT:DISP
-   + MEAS:STAT:MODE
+   + MEAS:SOUR  CHAN1|CHAN2|CHAN3|CHAN4
+   + MEAS:AMS   CHAN1|CHAN2|CHAN3|CHAN4
+   + MEAS:COUN:SOUR Chan1|CHAN2|CHAN3|CHAN4|OFF
+   + MEAS:COUN:VAL?
+   + MEAS:CREG:CAX <val>
+   + MEAS:CREG:CBX <val>
+   + MEAS:HIST:DISP ON|OFF
+   + MEAS:HIST:DMOD TABL|GRAP
+   + MEAS:SET:MAX <value>
+   + MEAS:SET:MID <value>
+   + MEAS:SET:MIN <value>
+   + MEAS:SET:TYPE DEL|PHAS|THR
+   + MEAS:STAT:DISP ON|OFF
    + MEAS:STAT:RES
-   + MEAS:SET:TYPE
-   + MEAS:SET:MAX
-   + MEAS:SET:MID
-   + MEAS:SET:MIN
-   + MEAS:AREA
-   + MEAS:CREG:CAX
-   + MEAS:CREG:CBX
-   + MEAS:HIST:DISP
-   + MEAS:HIST:DMOD
+   + MEAS:STAT:MODE DIFF|EXTR
 *** MEAS:FDEL?
     + MEAS:FDEL:SMAX?
     + MEAS:FDEL:SMIN?
