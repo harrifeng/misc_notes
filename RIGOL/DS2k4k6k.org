@@ -50,6 +50,8 @@
     + :BUS[1|2]:SPI:END MSB|LSB
     + :BUS[1|2]:SPI:OFFS <val>
 ** Calculate Subsystem
+   + CALC:MODE ADD|SUB|MULT|DIV|FFT|LOG|SDV|OFF
+   
    + CALC:ADD:SA CHAN1|CHAN2
    + CALC:ADD:SB CHAN1|CHAN2
    + CALC:ADD:INV ON|OFF
@@ -89,6 +91,18 @@
    + CALC:ADV:VAR2 <numeric_value>     
    + CALC:ADV:VSC <scale>
    + CALC:ADV:VOFF <offs>
+** Calibrate Subsytem
+   + Calibrate Subsystem is not supported.
+** Channel Subsystem
+   + :CHAN[1|2]:BWL 20M|100M|OFF
+   + :CHAN[1|2]:COUP AC|DC|GND
+   + :CHAN[1|2]:DISP ON|OFF
+   + :CHAN[1|2]:INV  ON|OFF
+   + :CHAN[1|2]:OFFS <offset>
+   + :CHAN[1|2]:SCAL <scale>
+   + :CHAN[1|2]:PROB 0.01|0.02|0.05|0.1|0.2|0.5|1|2|5|10|20|50|100|200|500|1000
+   + :CHAN[1|2]:UNIT VOLT|WATT|AMP|UNKN
+   + :CHAN[1|2]:VERN ON|OFF
 ** Cursor Subsystem
    + CURS:MODE OFF|MAN|TRAC|AUTO
    + CURS:MAN:TYPE TIME|AMPL
@@ -566,46 +580,71 @@
     + :BUS[1|2]:SPI:SS:POL <pos>
     + :BUS[1|2]:SPI:SS:SOUR CHAN1|CHAN2|CHAN3|CHAN4
     + :BUS[1|2]:SPI:SS:THR  <thre>
+*** BUS:CAN
+    + :BUS[1|2]:CAN:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:CAN:STYP CHAN|CANL|DIFF
+    + :BUS[1|2]:CAN:BAUD 100000|125000|250000|400000|500000|800000|1000000|USER
+    + :BUS[1|2]:CAN:SP   <spo>
+    + :BUS[1|2]:CAN:PACK ON|OFF
+    + :BUS[1|2]:CAN:THR  <thre>
 ** Calculate Subsystem
-   + CALC:ADD:SA CHAN1|CHAN2
-   + CALC:ADD:SB CHAN1|CHAN2
-   + CALC:ADD:INV ON|OFF
-   + CALC:ADD:VSC <scale>
-   + CALC:ADD:VOFF <offs>
-
-   + CALC:SUB:SA CHAN1|CHAN2
-   + CALC:SUB:SB CHAN1|CHAN2
-   + CALC:SUB:INV ON|OFF
-   + CALC:SUB:VSC <scale>
-   + CALC:SUB:VOFF <offs>
-
-   + CALC:MULT:SA CHAN1|CHAN2
-   + CALC:MULT:SB CHAN1|CHAN2
-   + CALC:MULT:INV ON|OFF
-   + CALC:MULT:VSC <scale>
-   + CALC:MULT:VOFF <offs>
-
-   + CALC:DIV:SA CHAN1|CHAN2
-   + CALC:DIV:SB CHAN1|CHAN2
-   + CALC:DIV:INV ON|OFF
-   + CALC:DIV:VSC <scale>
-   + CALC:DIV:VOFF <offs>
-     
-   + CALC:LOG:SA CHAN1|CHAN2
-   + CALC:LOG:SB CHAN1|CHAN2
-   + CALC:LOG:INV ON|OFF
-   + CALC:LOG:VSC <scale>
-   + CALC:LOG:VOFF <offs>
-   + CALC:LOG:OPER AND|OR|NOT|XOR    
-   + CALC:LOG:ATHR <thre>    
-   + CALC:LOG:BTHR <thre>          
-
-   + CALC:ADV:EXPR <expression>
-   + CALC:ADV:INV ON|OFF
-   + CALC:ADV:VAR1 <numeric_value>
-   + CALC:ADV:VAR2 <numeric_value>     
-   + CALC:ADV:VSC <scale>
-   + CALC:ADV:VOFF <offs>
+   + CALC:MODE ADD|SUB|MULT|DIV|FFT|LOG|SDV|OFF
+*** CALC:ADD
+    + CALC:ADD:SA CHAN1|CHAN2
+    + CALC:ADD:SB CHAN1|CHAN2
+    + CALC:ADD:INV ON|OFF
+    + CALC:ADD:VSC <scale>
+    + CALC:ADD:VOFF <offs>
+*** CALC:SUB
+    + CALC:SUB:SA CHAN1|CHAN2
+    + CALC:SUB:SB CHAN1|CHAN2
+    + CALC:SUB:INV ON|OFF
+    + CALC:SUB:VSC <scale>
+    + CALC:SUB:VOFF <offs>
+*** CALC:MULT
+    + CALC:MULT:SA CHAN1|CHAN2
+    + CALC:MULT:SB CHAN1|CHAN2
+    + CALC:MULT:INV ON|OFF
+    + CALC:MULT:VSC <scale>
+    + CALC:MULT:VOFF <offs>
+*** CALC:DIV
+    + CALC:DIV:SA CHAN1|CHAN2
+    + CALC:DIV:SB CHAN1|CHAN2
+    + CALC:DIV:INV ON|OFF
+    + CALC:DIV:VSC <scale>
+    + CALC:DIV:VOFF <offs>
+*** CALC:LOG
+    + CALC:LOG:SA CHAN1|CHAN2
+    + CALC:LOG:SB CHAN1|CHAN2
+    + CALC:LOG:INV ON|OFF
+    + CALC:LOG:VSC <scale>
+    + CALC:LOG:VOFF <offs>
+    + CALC:LOG:OPER AND|OR|NOT|XOR    
+    + CALC:LOG:ATHR <thre>    
+    + CALC:LOG:BTHR <thre>          
+*** CALC:ADV
+    + CALC:ADV:EXPR <expression>
+    + CALC:ADV:INV ON|OFF
+    + CALC:ADV:VAR1 <numeric_value>
+    + CALC:ADV:VAR2 <numeric_value>     
+    + CALC:ADV:VSC <scale>
+    + CALC:ADV:VOFF <offs>
+** Channel Subsystem
+   + :CHAN[1|2]:BWL 20M|100M|200M|OFF
+   + :CHAN[1|2]:COUP AC|DC|GND
+   + :CHAN[1|2]:DISP ON|OFF
+   + :CHAN[1|2]:IMP  OMEG|FIFT
+   + :CHAN[1|2]:INV  ON|OFF
+   + :CHAN[1|2]:OFFS <offset>
+   + :CHAN[1|2]:PROB 0.01|0.02|0.05|0.1|0.2|0.5|1|2|5|10|20|50|100|200|500|1000
+   + :CHAN[1|2]:SCAL <scale>
+   + :CHAN[1|2]:TYPE?
+   + :CHAN[1|2]:UNIT VOLT|WATT|AMP|UNKN
+   + :CHAN[1|2]:VERN ON|OFF      
+   + :CHAN[1|2]:BVOL <val>
+   + :CHAN[1|2]:CST
+   + :CHAN[1|2]:CEX
+   + :CHAN[1|2]:PEND SEND|DIFF
 ** Cursor Subsystem
    + CURS:MODE OFF|MAN|TRAC|AUTO
    + CURS:MAN:TYPE TIME|AMPL
