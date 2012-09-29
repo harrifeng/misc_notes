@@ -1,0 +1,1541 @@
+* 2000 Series Command summary
+** Acquire Subsystem
+   + :ACQ:AVER  <count>
+   + :ACQ:MDEP  AUTO|14000|140000|1400000|14000000|56000000|7000|70000|700000|7000000|28000000
+   + :ACQ:SRAT? 
+   + :ACQ:TYPE  NORM|AVER|PEAK|HRES
+   + :ACQ:AAL   ON|OFF
+** Bus Subsystem
+   + :BUS[1|2]:MODE PAR|RS232|IIC|SPI
+   + :BUS[1|2]:DISP ON|OFF
+   + :BUS[1|2]:FORM HEX|DEC|BIN|ASCII
+   + :BUS[1|2]:EVEN  ON|OFF
+   + :BUS[1|2]:EEXP  1|2
+*** BUS:PAR
+    + :BUS[1|2]:PAR:CLK CHAN1|CHAN2
+    + :BUS[1|2]:PAR:SLOP POS|NEG|BOTH
+    + :BUS[1|2]:PAR:BEST <channel_string>
+    + :BUS[1|2]:PAR:THR CHAN1|CHAN2, <thre>
+    + :BUS[1|2]:PAR:OFFS <val>
+*** BUS:RS232
+    + :BUS[1|2]:RS232:TX CHAN1|CHAN2
+    + :BUS[1|2]:RS232:RX CHAN1|CHAN2
+    + :BUS[1|2]:RS232:POL POS|NEG
+    + :BUS[1|2]:RS232:END MSB|LSB
+    + :BUS[1|2]:RS232:BAUD 2400|4800|9600|19200|38400|57600|115200|USER
+    + :BUS[1|2]:RS232:BUS <baud>
+    + :BUS[1|2]:RS232:DBIT 5|6|7|8|9
+    + :BUS[1|2]:RS232:SBIT 1|1.5|2
+    + :BUS[1|2]:RS232:PAR NONE|ODD|EVEN
+    + :BUS[1|2]:RS232:PACK ON|OFF
+    + :BUS[1|2]:RS232:PEND NULL|LF|CR|SP|FF
+    + :BUS[1|2]:RS232:TTHR <tthre>
+    + :BUS[1|2]:RS232:OFFS <val>
+*** BUS:IIC
+    + :BUS[1|2]:IIC:SCLK:SOUR CHAN1|CHAN2
+    + :BUS[1|2]:IIC:SCLK:SLOP POS|NEG
+    + :BUS[1|2]:IIC:SCLK:THR <thre>
+    + :BUS[1|2]:IIC:SDA:SOUR CHAN1|CHAN2
+    + :BUS[1|2]:IIC:SDA:POL HIGH|LOW
+    + :BUS[1|2]:IIC:SDA:THR <thre>
+    + :BUS[1|2]:IIC:OFFS <val>
+*** BUS:SPI
+    + :BUS[1|2]:SPI:SCLK:SOUR CHAN1|CHAN2
+    + :BUS[1|2]:SPI:SCLK:SLOP POS|NEG
+    + :BUS[1|2]:SPI:SCLK:THR <thre>
+    + :BUS[1|2]:SPI:SDA:SOUR CHAN1|CHAN2
+    + :BUS[1|2]:SPI:SDA:SLOP POS|NEG
+    + :BUS[1|2]:SPI:SDA:THR <thre>
+    + :BUS[1|2]:SPI:DBIT <width>
+    + :BUS[1|2]:SPI:END MSB|LSB
+    + :BUS[1|2]:SPI:OFFS <val>
+** Calculate Subsystem
+   + :CALC:MODE ADD|SUB|MULT|DIV|FFT|LOG|SDV|OFF
+   
+   + :CALC:ADD:SA CHAN1|CHAN2
+   + :CALC:ADD:SB CHAN1|CHAN2
+   + :CALC:ADD:INV ON|OFF
+   + :CALC:ADD:VSC <scale>
+   + :CALC:ADD:VOFF <offs>
+
+   + :CALC:SUB:SA CHAN1|CHAN2
+   + :CALC:SUB:SB CHAN1|CHAN2
+   + :CALC:SUB:INV ON|OFF
+   + :CALC:SUB:VSC <scale>
+   + :CALC:SUB:VOFF <offs>
+
+   + :CALC:MULT:SA CHAN1|CHAN2
+   + :CALC:MULT:SB CHAN1|CHAN2
+   + :CALC:MULT:INV ON|OFF
+   + :CALC:MULT:VSC <scale>
+   + :CALC:MULT:VOFF <offs>
+
+   + :CALC:DIV:SA CHAN1|CHAN2
+   + :CALC:DIV:SB CHAN1|CHAN2
+   + :CALC:DIV:INV ON|OFF
+   + :CALC:DIV:VSC <scale>
+   + :CALC:DIV:VOFF <offs>
+     
+   + :CALC:LOG:SA CHAN1|CHAN2
+   + :CALC:LOG:SB CHAN1|CHAN2
+   + :CALC:LOG:INV ON|OFF
+   + :CALC:LOG:VSC <scale>
+   + :CALC:LOG:VOFF <offs>
+   + :CALC:LOG:OPER AND|OR|NOT|XOR    
+   + :CALC:LOG:ATHR <thre>    
+   + :CALC:LOG:BTHR <thre>          
+
+   + :CALC:ADV:EXPR <expression>
+   + :CALC:ADV:INV ON|OFF
+   + :CALC:ADV:VAR1 <numeric_value>
+   + :CALC:ADV:VAR2 <numeric_value>     
+   + :CALC:ADV:VSC <scale>
+   + :CALC:ADV:VOFF <offs>
+** Calibrate Subsytem
+   + :Calibrate Subsystem is not supported.
+** Channel Subsystem
+   + :CHAN[1|2]:BWL 20M|100M|OFF
+   + :CHAN[1|2]:COUP AC|DC|GND
+   + :CHAN[1|2]:DISP ON|OFF
+   + :CHAN[1|2]:INV  ON|OFF
+   + :CHAN[1|2]:OFFS <offset>
+   + :CHAN[1|2]:SCAL <scale>
+   + :CHAN[1|2]:PROB 0.01|0.02|0.05|0.1|0.2|0.5|1|2|5|10|20|50|100|200|500|1000
+   + :CHAN[1|2]:UNIT VOLT|WATT|AMP|UNKN
+   + :CHAN[1|2]:VERN ON|OFF
+** Cursor Subsystem
+   + :CURS:MODE OFF|MAN|TRAC|AUTO
+   + :CURS:MAN:TYPE TIME|AMPL
+   + :CURS:MAN:SOUR CHAN1|CHAN2|MATH|NONE
+   + :CURS:MAN:TUN SEC|HZ|PERC|DEGR
+   + :CURS:MAN:VUN SUN|PERC
+   + :CURS:MAN:CAX <ax>
+   + :CURS:MAN:CBX <bx>
+   + :CURS:MAN:CAY <ay>
+   + :CURS:MAN:CBY <by>
+   + :CURS:MAN:AXV?
+   + :CURS:MAN:AYV?
+   + :CURS:MAN:BXV?
+   + :CURS:MAN:BYV?
+   + :CURS:MAN:XDEL?
+   + :CURS:MAN:IXD?
+   + :CURS:MAN:YDEL?
+     
+   + :CURS:TRAC:SOUR1 CHAN1|CHAN2|MATH|NONE
+   + :CURS:TRAC:SOUR2 CHAN1|CHAN2|MATH|NONE
+   + :CURS:TRAC:CAX <ax>
+   + :CURS:TRAC:CBX <bx>
+   + :CURS:TRAC:CAY <ay>
+   + :CURS:TRAC:CBY <by>
+   + :CURS:TRAC:AXV?
+   + :CURS:TRAC:AYV?
+   + :CURS:TRAC:BXV?
+   + :CURS:TRAC:BYV?
+   + :CURS:TRAC:XDEL?
+   + :CURS:TRAC:IXD?
+   + :CURS:TRAC:YDEL?
+
+** Display Sbusystem
+   + :Display commands are NOT supported
+** Function Subsystem
+   + :FUNC:WRM OFF|REC|KEEP|PLAY|ANAL
+   + :FUNC:WREC:FEND <frame>
+   + :FUNC:WREC:FMAX?
+   + :FUNC:WREC:INT <interval>
+   + :FUNC:WREC:OPER REC|STOP
+
+   + :FUNC:WREP:MODE REP|SING
+   + :FUNC:WREP:INT <interval>
+   + :FUNC:WREP:FST <frame>
+   + :FUNC:WREP:FCUR <frame>
+   + :FUNC:WREP:FEND <frame>
+   + :FUNC:WREP:FMAX?
+   + :FUNC:WREP:OPER PLAY|STOP|PAUS
+   + :FUNC:WREP:TTAG ON|OFF
+   + :FUNC:WREP:CTAG?
+
+   + :FUNC:WAN:MODE TRAC|MASK
+   + :FUNC:WAN:SOUR CHAN1|CHAN2
+   + :FUNC:WAN:FCUR <number>
+   + :FUNC:WAN:TDIS ON|OFF
+   + :FUNC:WAN:SET:SST <number>
+   + :FUNC:WAN:SET:SSE <number>
+   + :FUNC:WAN:SET:SFR <number>
+   + :FUNC:WAN:SET:EFR <number>
+   + :FUNC:WAN:SET:THR <number>
+   + :FUNC:WAN:SET:XMAS <number>
+   + :FUNC:WAN:SET:YMAS <number>
+   + :FUNC:WAN:SETM
+   + :FUNC:WAN:CMAS
+   + :FUNC:WAN:STAR
+   + :FUNC:WAN:PREV
+   + :FUNC:WAN:NEXT
+   + :FUNC:WAN:EFC?
+   + :FUNC:WAN:ECUR <number>
+   + :FUNC:WAN:ECD?
+** LAN Subsystem
+   + :Lan commands are not supported
+** Mask Subsystem
+   + :MASK:ENAB ON|OFF
+   + :MASK:SOUR CHAN1|CHAN2
+   + :MASK:OPER RUN|STOP
+   + :MASK:MDIS ON|OFF
+   + :MASK:SOO  ON|OFF
+   + :MASK:OUTP FAIL|FSO
+   + :MASK:X    <x>
+   + :MASK:Y    <y>
+   + :MASK:CRE  
+   + :MASK:PASS?
+   + :MASK:FAIL?
+   + :MASK:TOT?
+   + :MASK:RES
+   + :MASK:DATA <mask>
+** Measure Subsystem
+   + :MEAS:SOUR
+   + :MEAS:COUN:SOUR
+   + :MEAS:COUN:VAL
+   + :MEAS:CLE
+   + :MEAS:REC
+   + :MEAS:ADIS
+   + :MEAS:AMS
+   + :MEAS:STAT:DISP
+   + :MEAS:STAT:MODE
+   + :MEAS:STAT:RES
+   + :MEAS:SET:TYPE
+   + :MEAS:SET:MAX
+   + :MEAS:SET:MID
+   + :MEAS:SET:MIN
+   + :MEAS:AREA
+   + :MEAS:CREG:CAX
+   + :MEAS:CREG:CBX
+   + :MEAS:HIST:DISP
+   + :MEAS:HIST:DMOD
+*** MEAS:FDEL?
+    + :MEAS:FDEL:SMAX?
+    + :MEAS:FDEL:SMIN?
+    + :MEAS:FDEL:SCUR?
+    + :MEAS:FDEL:SCUR?
+    + :MEAS:FDEL:SAV?
+    + :MEAS:FDEL:DEV?
+*** MEAS:FPH?
+    + :MEAS:FPH:SMAX?
+    + :MEAS:FPH:SMIN?
+    + :MEAS:FPH:SCUR?
+    + :MEAS:FPH:SCUR?
+    + :MEAS:FPH:SAV?
+    + :MEAS:FPH:DEV?
+*** MEAS:FREQ?
+    + :MEAS:FREQ:SMAX?
+    + :MEAS:FREQ:SMIN?
+    + :MEAS:FREQ:SCUR?
+    + :MEAS:FREQ:SCUR?
+    + :MEAS:FREQ:SAV?
+    + :MEAS:FREQ:DEV?
+*** MEAS:FTIM?
+    + :MEAS:FTIM:SMAX?
+    + :MEAS:FTIM:SMIN?
+    + :MEAS:FTIM:SCUR?
+    + :MEAS:FTIM:SCUR?
+    + :MEAS:FTIM:SAV?
+    + :MEAS:FTIM:DEV?
+*** MEAS:NDUT?
+    + :MEAS:NDUT:SMAX?
+    + :MEAS:NDUT:SMIN?
+    + :MEAS:NDUT:SCUR?
+    + :MEAS:NDUT:SCUR?
+    + :MEAS:NDUT:SAV?
+    + :MEAS:NDUT:DEV?
+*** MEAS:NWID?
+    + :MEAS:NWID:SMAX?
+    + :MEAS:NWID:SMIN?
+    + :MEAS:NWID:SCUR?
+    + :MEAS:NWID:SCUR?
+    + :MEAS:NWID:SAV?
+    + :MEAS:NWID:DEV?
+*** MEAS:OVER?
+    + :MEAS:OVER:SMAX?
+    + :MEAS:OVER:SMIN?
+    + :MEAS:OVER:SCUR?
+    + :MEAS:OVER:SCUR?
+    + :MEAS:OVER:SAV?
+    + :MEAS:OVER:DEV?
+*** MEAS:PDUT?
+    + :MEAS:PDUT:SMAX?
+    + :MEAS:PDUT:SMIN?
+    + :MEAS:PDUT:SCUR?
+    + :MEAS:PDUT:SCUR?
+    + :MEAS:PDUT:SAV?
+    + :MEAS:PDUT:DEV?
+*** MEAS:PER?
+    + :MEAS:PER:SMAX?
+    + :MEAS:PER:SMIN?
+    + :MEAS:PER:SCUR?
+    + :MEAS:PER:SCUR?
+    + :MEAS:PER:SAV?
+    + :MEAS:PER:DEV?
+*** MEAS:PRES?
+    + :MEAS:PRES:SMAX?
+    + :MEAS:PRES:SMIN?
+    + :MEAS:PRES:SCUR?
+    + :MEAS:PRES:SCUR?
+    + :MEAS:PRES:SAV?
+    + :MEAS:PRES:DEV?
+*** MEAS:PWID?
+    + :MEAS:PWID:SMAX?
+    + :MEAS:PWID:SMIN?
+    + :MEAS:PWID:SCUR?
+    + :MEAS:PWID:SCUR?
+    + :MEAS:PWID:SAV?
+    + :MEAS:PWID:DEV?
+*** MEAS:RTIM?
+    + :MEAS:RTIM:SMAX?
+    + :MEAS:RTIM:SMIN?
+    + :MEAS:RTIM:SCUR?
+    + :MEAS:RTIM:SCUR?
+    + :MEAS:RTIM:SAV?
+    + :MEAS:RTIM:DEV?
+*** MEAS:RDEL?
+    + :MEAS:RDEL:SMAX?
+    + :MEAS:RDEL:SMIN?
+    + :MEAS:RDEL:SCUR?
+    + :MEAS:RDEL:SCUR?
+    + :MEAS:RDEL:SAV?
+    + :MEAS:RDEL:DEV?
+*** MEAS:RPH?
+    + :MEAS:RPH:SMAX?
+    + :MEAS:RPH:SMIN?
+    + :MEAS:RPH:SCUR?
+    + :MEAS:RPH:SCUR?
+    + :MEAS:RPH:SAV?
+    + :MEAS:RPH:DEV?
+*** MEAS:VAMP?
+    + :MEAS:VAMP:SMAX?
+    + :MEAS:VAMP:SMIN?
+    + :MEAS:VAMP:SCUR?
+    + :MEAS:VAMP:SCUR?
+    + :MEAS:VAMP:SAV?
+    + :MEAS:VAMP:DEV?
+*** MEAS:VAVG?
+    + :MEAS:VAVG:SMAX?
+    + :MEAS:VAVG:SMIN?
+    + :MEAS:VAVG:SCUR?
+    + :MEAS:VAVG:SCUR?
+    + :MEAS:VAVG:SAV?
+    + :MEAS:VAVG:DEV?
+*** MEAS:VBAS?
+    + :MEAS:VBAS:SMAX?
+    + :MEAS:VBAS:SMIN?
+    + :MEAS:VBAS:SCUR?
+    + :MEAS:VBAS:SCUR?
+    + :MEAS:VBAS:SAV?
+    + :MEAS:VBAS:DEV?
+*** MEAS:VMAX?
+    + :MEAS:VMAX:SMAX?
+    + :MEAS:VMAX:SMIN?
+    + :MEAS:VMAX:SCUR?
+    + :MEAS:VMAX:SCUR?
+    + :MEAS:VMAX:SAV?
+    + :MEAS:VMAX:DEV?
+*** MEAS:VMIN?
+    + :MEAS:VMIN:SMAX?
+    + :MEAS:VMIN:SMIN?
+    + :MEAS:VMIN:SCUR?
+    + :MEAS:VMIN:SCUR?
+    + :MEAS:VMIN:SAV?
+    + :MEAS:VMIN:DEV?
+*** MEAS:VPP?
+    + :MEAS:VPP:SMAX?
+    + :MEAS:VPP:SMIN?
+    + :MEAS:VPP:SCUR?
+    + :MEAS:VPP:SCUR?
+    + :MEAS:VPP:SAV?
+    + :MEAS:VPP:DEV?
+*** MEAS:VRMS?
+    + :MEAS:VRMS:SMAX?
+    + :MEAS:VRMS:SMIN?
+    + :MEAS:VRMS:SCUR?
+    + :MEAS:VRMS:SCUR?
+    + :MEAS:VRMS:SAV?
+    + :MEAS:VRMS:DEV?
+*** MEAS:VTOP?
+    + :MEAS:VTOP:SMAX?
+    + :MEAS:VTOP:SMIN?
+    + :MEAS:VTOP:SCUR?
+    + :MEAS:VTOP:SCUR?
+    + :MEAS:VTOP:SAV?
+    + :MEAS:VTOP:DEV?
+** System subsystem
+   + :System commands are NOT supported
+** TIMebase subsystem
+   + :TIM:DEL:ENAB ON|OFF
+   + :TIM:DEL:OFFS <offset>
+   + :TIM:DEL:SCAL <scale_value>
+   + :TIM:OFFS     <offset>
+   + :TIM:SCAL     <scale_value>
+   + :TIM:MODE     MAIN|XY|ROLL 
+   + :TIM:HREF:MODE CENT|TPOS|USER
+   + :TIM:HREF:POS  <pos>
+   + :TIM:VERN      ON|OFF
+** Trigger Subsystem
+   + :TRIG:MODE EDGE|PULS|RUNT|WIND|NEDG|SLOP|VID|PATT|DEL|TIM|DURAT|SHOL|RS232|IIC|SPI|USB
+   + :TRIG:COUP AC|DC|LFR|HFR
+   + :TRIG:STAT?
+   + :TRIG:SWE <sweep>
+   + :TRIG:HOLD <value>
+   + :TRIG:NREJ ON|OFF
+*** TRIG:EDG
+    + :TRIG:EDG:SOUR CHAN1|CHAN2|EXT|ACL
+    + :TRIG:EDG:SLOP POS|NEG|RFALI
+    + :TRIG:EDG:LEV <level>
+*** TRIG:PULS
+    + :TRIG:PULS:SOUR CHAN1|CHAN2
+    + :TRIG:PULS:WHEN PGR|PLES|NGR|NLES|PGL|NGL
+    + :TRIG:PULS:UWID <width>
+    + :TRIG:PULS:LWID <width>
+    + :TRIG:PULS:LEV  <level>
+*** TRIG:RUNT
+    + :TRIG:RUNT:SOUR CHAN1|CHAN2
+    + :TRIG:RUNT:POL  POS|NEG
+    + :TRIG:RUNT:WHEN NONE|GRE|LESS|GLES
+    + :TRIG:RUNT:WLOW <NR3>
+    + :TRIG:RUNT:WUPP <NR3>
+    + :TRIG:RUNT:ALEV <level>
+    + :TRIG:RUNT:BLEV <level>
+*** TRIG:WIND
+    + :TRIG:WID:SOUR CHAN1|CHAN2
+    + :TRIG:WID:SLOP POS|NEG|REALI
+    + :TRIG:WID:POS  EXIT|ENTER|TIM
+    + :TRIG:WID:TIM  <NR3>
+*** TRIG:NEDG
+    + :TRIG:NEDG:SOUR CHAN1|CHAN2
+    + :TRIG:NEDG:SLOP POS|NEG
+    + :TRIG:NEDG:IDLE <NR3>
+    + :TRIG:NEDG:EDGE <NR1>
+    + :TRIG:NEDG:LEV  <level>
+*** TRIG:SLOP
+    + :TRIG:SLOP:SOUR CHAN1|CHAN2
+    + :TRIG:SLOP:WHEN PGR|PLES|NGR|NLES|PGL|NGL
+    + :TRIG:SLOP:TUPP <upper>
+    + :TRIG:SLOP:TLOW <lower>
+    + :TRIG:SLOP:WIND TA|TB|TAB
+    + :TRIG:SLOP:ALEV <level>
+    + :TRIG:SLOP:BLEV <level>
+*** TRIG:VID
+    + :TRIG:VID:SOUR CHAN1|CHAN2
+    + :TRIG:VID:SLOP POS|NEG
+    + :TRIG:VID:MOD  ODDF|EVEN|LINE|ALIN
+    + :TRIG:VID:LINE <line>
+    + :TRIG:VID:STAN PALS|NTSC|480P|576P|720P60HZ|720P50HZ|720P30HZ|720P25HZ|720P24HZ|1080P60HZ|1080P50HZ|1080P30HZ|1080P25HZ|1080P24HZ|1080I30HZ|1080PI25HZ|1080I24HZ
+    + :TRIG:VID:LEV  <level>
+*** TRIG:PATT
+    + :TRIG:PATT:PATT <pattern>
+    + :TRIG:PULS:LEV  <level>
+*** TRIG:DEL
+    + :TRIG:DEL:SA    CHAN1|CHAN2
+    + :TRIG:DEL:SLOPA POS|NEG
+    + :TRIG:DEL:SB    CHAN1|CHAN2
+    + :TRIG:DEL:SLOPB POS|NEG
+    + :TRIG:DEL:DEL:TYP <type>
+    + :TRIG:DEL:DEL:TUPP <NR3>
+    + :TRIG:DEL:DEL:TLOW <NR3>
+*** TRIG:TIM
+    + :TRIG:TIM:SOUR CHAN1|CHAN2
+    + :TRIG:TIM:SLOP POS|NEG|RFALI
+    + :TRIG:TIM:TIM  <time>
+*** TRIG:DURA
+    + :TRIG:DURA:SOUR CHAN1|CHAN2
+    + :TRIG:DURA:TYP  H|L|X
+    + :TRIG:DURA:WHEN GRE|LESS|GLES
+    + :TRIG:DURA:TUPP <NR3>
+    + :TRIG:DURA:TLOW <NR3>
+*** TRIG:SHOL
+    + :TRIG:SHOL:DS CHAN1|CHAN2
+    + :TRIG:SHOL:CS CHAN1|CHAN2
+    + :TRIG:SHOL:SLOP POS|NEG
+    + :TRIG:SHOL:PATT H|L
+    + :TRIG:SHOL:TYP  <type>
+    + :TRIG:SHOL:STIM <NR3>
+    + :TRIG:SHOL:HTIM <NR3>
+*** TRIG:RS232
+    + :TRIG:RS232:SOUR CHAN1|CHAN2
+    + :TRIG:RS232:WHEN STAR|ERR|PAR|DATA
+    + :TRIG:RS232:PAR  <parity>
+    + :TRIG:RS232:STOP 1|2
+    + :TRIG:RS232:DATA <data>
+    + :TRIG:RS232:WIDT <width>
+    + :TRIG:RS232:BAUD <baud_rate>
+    + :TRIG:RS232:BUS  <user_baud>
+    + :TRIG:RS232:LEV  <level>
+*** TRIG:IIC
+    + :TRIG:IIC:SCL  CHAN1|CHAN2
+    + :TRIG:IIC:SDA  CHAN1|CHAN2
+    + :TRIG:IIC:WHEN STAR|REST|STOP|NACK|ADDR|DATA|ADAT
+    + :TRIG:IIC:AWID 7|8|10
+    + :TRIG:IIC:ADDR <addr>
+    + :TRIG:IIC:DIR  READ|WRIT|RWR
+    + :TRIG:IIC:DATA <dat>
+    + :TRIG:IIC:CLEV <level>
+    + :TRIG:IIC:DLEV <level>
+*** TRIG:SPI
+    + :TRIG:SPI:SCL  CHAN1|CHAN2
+    + :TRIG:SPI:SDA  CHAN1|CHAN2
+    + :TRIG:SPI:WIDT <width>
+    + :TRIG:SPI:DATA <dat>
+    + :TRIG:SPI:TIM  <time_value>
+    + :TRIG:SPI:SLOP POS|NEG
+    + :TRIG:SPI:CLEV <level>
+    + :TRIG:SPI:DLEV <level>
+*** TRIG:USB
+    + :TRIG:USB:DPL  CHAN1|CHAN2
+    + :TRIG:USB:DMIN CHAN1|CHAN2
+    + :TRIG:USB:SPE  LOW|FULL
+    + :TRIG:USB:POL  POS|NEG
+    + :TRIG:USB:WHEN SOP|EOP|RC|SUSP|EXIT
+    + :TRIG:USB:PLEV <level>
+    + :TRIG:USB:MPLEV <level>
+** Waveform Subsystem
+   + :WAV:SOUR    CHAN1|CHAN2
+   + :WAV:MODE    NORM|MAX|RAW
+   + :WAV:FORM    WORD|BYTE|ASCII
+   + :WAV:POIN    <point>
+   + :WAV:DATA?
+   + :WAV:XINC?
+   + :WAV:XOR      
+   + :WAV:XREF?      
+   + :WAV:YINC?      
+   + :WAV:YOR? 
+   + :WAV:YREF 
+   + :WAV:STAR    <sta> 
+   + :WAV:STOP    <sta>
+   + :WAV:BEG  
+   + :WAV:END
+   + :WAV:RES  
+   + :WAV:PRE  
+   + :WAV:STAT?  
+
+
+
+
+* 4000 Series Command summary
+** Acquire Subsystem
+   + :ACQ:AVER  <count>
+   + :ACQ:MDEP  AUTO|14000|140000|1400000|14000000|56000000|7000|70000|700000|7000000|28000000
+   + :ACQ:SRAT? 
+   + :ACQ:TYPE  NORM|AVER|PEAK|HRES
+   + :ACQ:AAL   ON|OFF
+** Bus Subsystem
+   + :BUS[1|2]:MODE PAR|RS232|IIC|SPI
+   + :BUS[1|2]:DISP ON|OFF
+   + :BUS[1|2]:FORM HEX|DEC|BIN|ASCII
+   + :BUS[1|2]:EVEN  ON|OFF
+   + :BUS[1|2]:EEXP  1|2
+*** BUS:CAN
+    + :BUS[1|2]:CAN:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:CAN:STYP CHAN|CANL|DIFF
+    + :BUS[1|2]:CAN:BAUD 100000|125000|250000|400000|500000|800000|1000000|USER
+    + :BUS[1|2]:CAN:BUS  <baud>
+    + :BUS[1|2]:CAN:SP   <spo>
+    + :BUS[1|2]:CAN:THR  <thre>
+    + :BUS[1|2]:CAN:OFFS <val>
+*** BUS:IIC
+    + :BUS[1|2]:IIC:OFFS <val>
+    + :BUS[1|2]:IIC:SCLK:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:IIC:SCLK:THR <thre>
+    + :BUS[1|2]:IIC:SDA:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:IIC:SDA:THR <thre>
+*** BUS:PAR
+    + :BUS[1|2]:PAR:BEST <channel_string>
+    + :BUS[1|2]:PAR:CLK CHAN1|CHAN2|CHAN3|CHAN4|OFF
+    + :BUS[1|2]:PAR:OFFS <val>
+    + :BUS[1|2]:PAR:SLOP POS|NEG|BOTH
+    + :BUS[1|2]:PAR:THR CHAN1|CHAN2|CHAN3|CHAN4, <thre>
+*** BUS:RS232
+    + :BUS[1|2]:RS232:BAUD 2400|4800|9600|19200|38400|57600|115200|USER
+    + :BUS[1|2]:RS232:BUS <baud>
+    + :BUS[1|2]:RS232:DBIT 5|6|7|8|9
+    + :BUS[1|2]:RS232:END MSB|LSB
+    + :BUS[1|2]:RS232:OFFS <val>
+    + :BUS[1|2]:RS232:PACK ON|OFF
+    + :BUS[1|2]:RS232:PAR NONE|ODD|EVEN
+    + :BUS[1|2]:RS232:PEND NULL|LF|CR|SP|FF
+    + :BUS[1|2]:RS232:POL POS|NEG
+    + :BUS[1|2]:RS232:RTHR <rthre>
+    + :BUS[1|2]:RS232:RX CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:RS232:SBIT 1|1.5|2
+    + :BUS[1|2]:RS232:TTHR <tthre>
+    + :BUS[1|2]:RS232:TX CHAN1|CHAN2|CHAN3|CHAN4
+*** BUS:SPI
+    + :BUS[1|2]:SPI:DBIT <width>
+    + :BUS[1|2]:SPI:END  <endian>
+    + :BUS[1|2]:SPI:MISO:POL <pos>
+    + :BUS[1|2]:SPI:MISO:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:SPI:MISO:THR  <thre>
+    + :BUS[1|2]:SPI:MOSI:POL <pos>
+    + :BUS[1|2]:SPI:MOSI:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:SPI:MOSI:THR  <thre>
+    + :BUS[1|2]:SPI:OFFS <val>
+    + :BUS[1|2]:SPI:SCLK:POL <pos>
+    + :BUS[1|2]:SPI:SCLK:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:SPI:SCLK:THR  <thre>
+    + :BUS[1|2]:SPI:SS:POL <pos>
+    + :BUS[1|2]:SPI:SS:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:SPI:SS:THR  <thre>
+*** BUS:CAN
+    + :BUS[1|2]:CAN:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:CAN:STYP CHAN|CANL|DIFF
+    + :BUS[1|2]:CAN:BAUD 100000|125000|250000|400000|500000|800000|1000000|USER
+    + :BUS[1|2]:CAN:SP   <spo>
+    + :BUS[1|2]:CAN:PACK ON|OFF
+    + :BUS[1|2]:CAN:THR  <thre>
+** Calculate Subsystem
+   + :CALC:MODE ADD|SUB|MULT|DIV|FFT|LOG|SDV|OFF
+*** CALC:ADD
+    + :CALC:ADD:SA CHAN1|CHAN2
+    + :CALC:ADD:SB CHAN1|CHAN2
+    + :CALC:ADD:INV ON|OFF
+    + :CALC:ADD:VSC <scale>
+    + :CALC:ADD:VOFF <offs>
+*** CALC:SUB
+    + :CALC:SUB:SA CHAN1|CHAN2
+    + :CALC:SUB:SB CHAN1|CHAN2
+    + :CALC:SUB:INV ON|OFF
+    + :CALC:SUB:VSC <scale>
+    + :CALC:SUB:VOFF <offs>
+*** CALC:MULT
+    + :CALC:MULT:SA CHAN1|CHAN2
+    + :CALC:MULT:SB CHAN1|CHAN2
+    + :CALC:MULT:INV ON|OFF
+    + :CALC:MULT:VSC <scale>
+    + :CALC:MULT:VOFF <offs>
+*** CALC:DIV
+    + :CALC:DIV:SA CHAN1|CHAN2
+    + :CALC:DIV:SB CHAN1|CHAN2
+    + :CALC:DIV:INV ON|OFF
+    + :CALC:DIV:VSC <scale>
+    + :CALC:DIV:VOFF <offs>
+*** CALC:LOG
+    + :CALC:LOG:SA CHAN1|CHAN2
+    + :CALC:LOG:SB CHAN1|CHAN2
+    + :CALC:LOG:INV ON|OFF
+    + :CALC:LOG:VSC <scale>
+    + :CALC:LOG:VOFF <offs>
+    + :CALC:LOG:OPER AND|OR|NOT|XOR    
+    + :CALC:LOG:ATHR <thre>    
+    + :CALC:LOG:BTHR <thre>          
+*** CALC:ADV
+    + :CALC:ADV:EXPR <expression>
+    + :CALC:ADV:INV ON|OFF
+    + :CALC:ADV:VAR1 <numeric_value>
+    + :CALC:ADV:VAR2 <numeric_value>     
+    + :CALC:ADV:VSC <scale>
+    + :CALC:ADV:VOFF <offs>
+** Channel Subsystem
+   + :CHAN[1|2|3|4]:BWL 20M|100M|200M|OFF
+   + :CHAN[1|2|3|4]:COUP AC|DC|GND
+   + :CHAN[1|2|3|4]:DISP ON|OFF
+   + :CHAN[1|2|3|4]:IMP  OMEG|FIFT
+   + :CHAN[1|2|3|4]:INV  ON|OFF
+   + :CHAN[1|2|3|4]:OFFS <offset>
+   + :CHAN[1|2|3|4]:PROB 0.01|0.02|0.05|0.1|0.2|0.5|1|2|5|10|20|50|100|200|500|1000
+   + :CHAN[1|2|3|4]:SCAL <scale>
+   + :CHAN[1|2|3|4]:TYPE?
+   + :CHAN[1|2|3|4]:UNIT VOLT|WATT|AMP|UNKN
+   + :CHAN[1|2|3|4]:VERN ON|OFF      
+   + :CHAN[1|2|3|4]:BVOL <val>
+   + :CHAN[1|2|3|4]:CST
+   + :CHAN[1|2|3|4]:CEX
+   + :CHAN[1|2|3|4]:PEND SEND|DIFF
+** Cursor Subsystem
+   + :Cursor Subystem is not supported
+     
+   + :CURS:MODE OFF|MAN|TRAC|AUTO
+   + :CURS:MAN:TYPE TIME|AMPL
+   + :CURS:MAN:SOUR CHAN1|CHAN2|MATH|NONE
+   + :CURS:MAN:TUN SEC|HZ|PERC|DEGR
+   + :CURS:MAN:VUN SUN|PERC
+   + :CURS:MAN:CAX <ax>
+   + :CURS:MAN:CBX <bx>
+   + :CURS:MAN:CAY <ay>
+   + :CURS:MAN:CBY <by>
+   + :CURS:MAN:AXV?
+   + :CURS:MAN:AYV?
+   + :CURS:MAN:BXV?
+   + :CURS:MAN:BYV?
+   + :CURS:MAN:XDEL?
+   + :CURS:MAN:IXD?
+   + :CURS:MAN:YDEL?
+     
+   + :CURS:TRAC:SOUR1 CHAN1|CHAN2|MATH|NONE
+   + :CURS:TRAC:SOUR2 CHAN1|CHAN2|MATH|NONE
+   + :CURS:TRAC:CAX <ax>
+   + :CURS:TRAC:CBX <bx>
+   + :CURS:TRAC:CAY <ay>
+   + :CURS:TRAC:CBY <by>
+   + :CURS:TRAC:AXV?
+   + :CURS:TRAC:AYV?
+   + :CURS:TRAC:BXV?
+   + :CURS:TRAC:BYV?
+   + :CURS:TRAC:XDEL?
+   + :CURS:TRAC:IXD?
+   + :CURS:TRAC:YDEL?
+** Display Sbusystem
+   + :Display commands are NOT supported
+** Function Subsystem
+   + :FUNC:WRM OFF|REC|KEEP|PLAY|ANAL
+*** FUNC:WREC
+    + :FUNC:WREC:FEND <frame>
+    + :FUNC:WREC:FMAX?
+    + :FUNC:WREC:INT <interval>
+    + :FUNC:WREC:OPER REC|STOP
+*** FUNC:WREP
+    + :FUNC:WREP:FCUR <frame>
+    + :FUNC:WREP:FEND <frame>
+    + :FUNC:WREP:FMAX?
+    + :FUNC:WREP:FST <frame>
+    + :FUNC:WREP:INT <interval>
+    + :FUNC:WREP:MODE REP|SING
+    + :FUNC:WREP:OPER PLAY|STOP|PAUS
+*** FUNC:WAN
+    + :FUNC:WAN:CANC
+    + :FUNC:WAN:MODE TRAC|MASK
+    + :FUNC:WAN:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :FUNC:WAN:FCUR <number>
+    + :FUNC:WAN:TDIS ON|OFF
+    + :FUNC:WAN:SETM
+    + :FUNC:WAN:CMAS
+    + :FUNC:WAN:STAR
+    + :FUNC:WAN:PREV
+    + :FUNC:WAN:NEXT
+    + :FUNC:WAN:EFC?
+    + :FUNC:WAN:ECUR <number>
+    + :FUNC:WAN:ECD?
+    + :FUNC:WAN:SET:SST <number>
+    + :FUNC:WAN:SET:SSE <number>
+    + :FUNC:WAN:SET:SFR <number>
+    + :FUNC:WAN:SET:EFR <number>
+    + :FUNC:WAN:SET:THR <number>
+    + :FUNC:WAN:SET:XMAS <number>
+    + :FUNC:WAN:SET:YMAS <number>
+** LAN Subsystem
+   + :Lan commands are not supported
+** Mask Subsystem
+   + :MASK:CRE  
+   + :MASK:DATA <mask>
+   + :MASK:ENAB ON|OFF
+   + :MASK:FAIL?
+   + :MASK:MDIS ON|OFF
+   + :MASK:OPER RUN|STOP
+   + :MASK:OUTP FAIL|FSO
+   + :MASK:PASS?
+   + :MASK:RES
+   + :MASK:SOO  ON|OFF
+   + :MASK:SOUR CHAN1|CHAN2
+   + :MASK:TOT?
+   + :MASK:X    <x>
+   + :MASK:Y    <y>
+** Measure Subsystem
+   + :MEAS:ADIS  ON|OFF
+   + :MEAS:AREA  SCR|CREG
+   + :MEAS:CLE   ITEM1|ITEM2|ITEM3|ITEM4|ITEM5|ALL
+   + :MEAS:REC
+   + :MEAS:SOUR  CHAN1|CHAN2|CHAN3|CHAN4
+   + :MEAS:AMS   CHAN1|CHAN2|CHAN3|CHAN4
+   + :MEAS:COUN:SOUR Chan1|CHAN2|CHAN3|CHAN4|OFF
+   + :MEAS:COUN:VAL?
+   + :MEAS:CREG:CAX <val>
+   + :MEAS:CREG:CBX <val>
+   + :MEAS:HIST:DISP ON|OFF
+   + :MEAS:HIST:DMOD TABL|GRAP
+   + :MEAS:SET:MAX <value>
+   + :MEAS:SET:MID <value>
+   + :MEAS:SET:MIN <value>
+   + :MEAS:SET:TYPE DEL|PHAS|THR
+   + :MEAS:STAT:DISP ON|OFF
+   + :MEAS:STAT:RES
+   + :MEAS:STAT:MODE DIFF|EXTR
+*** MEAS:FDEL?
+    + :MEAS:FDEL:SMAX?
+    + :MEAS:FDEL:SMIN?
+    + :MEAS:FDEL:SCUR?
+    + :MEAS:FDEL:SCUR?
+    + :MEAS:FDEL:SAV?
+    + :MEAS:FDEL:DEV?
+*** MEAS:FPH?
+    + :MEAS:FPH:SMAX?
+    + :MEAS:FPH:SMIN?
+    + :MEAS:FPH:SCUR?
+    + :MEAS:FPH:SCUR?
+    + :MEAS:FPH:SAV?
+    + :MEAS:FPH:DEV?
+*** MEAS:FREQ?
+    + :MEAS:FREQ:SMAX?
+    + :MEAS:FREQ:SMIN?
+    + :MEAS:FREQ:SCUR?
+    + :MEAS:FREQ:SCUR?
+    + :MEAS:FREQ:SAV?
+    + :MEAS:FREQ:DEV?
+*** MEAS:FTIM?
+    + :MEAS:FTIM:SMAX?
+    + :MEAS:FTIM:SMIN?
+    + :MEAS:FTIM:SCUR?
+    + :MEAS:FTIM:SCUR?
+    + :MEAS:FTIM:SAV?
+    + :MEAS:FTIM:DEV?
+*** MEAS:NDUT?
+    + :MEAS:NDUT:SMAX?
+    + :MEAS:NDUT:SMIN?
+    + :MEAS:NDUT:SCUR?
+    + :MEAS:NDUT:SCUR?
+    + :MEAS:NDUT:SAV?
+    + :MEAS:NDUT:DEV?
+*** MEAS:NWID?
+    + :MEAS:NWID:SMAX?
+    + :MEAS:NWID:SMIN?
+    + :MEAS:NWID:SCUR?
+    + :MEAS:NWID:SCUR?
+    + :MEAS:NWID:SAV?
+    + :MEAS:NWID:DEV?
+*** MEAS:OVER?
+    + :MEAS:OVER:SMAX?
+    + :MEAS:OVER:SMIN?
+    + :MEAS:OVER:SCUR?
+    + :MEAS:OVER:SCUR?
+    + :MEAS:OVER:SAV?
+    + :MEAS:OVER:DEV?
+*** MEAS:PDUT?
+    + :MEAS:PDUT:SMAX?
+    + :MEAS:PDUT:SMIN?
+    + :MEAS:PDUT:SCUR?
+    + :MEAS:PDUT:SCUR?
+    + :MEAS:PDUT:SAV?
+    + :MEAS:PDUT:DEV?
+*** MEAS:PER?
+    + :MEAS:PER:SMAX?
+    + :MEAS:PER:SMIN?
+    + :MEAS:PER:SCUR?
+    + :MEAS:PER:SCUR?
+    + :MEAS:PER:SAV?
+    + :MEAS:PER:DEV?
+*** MEAS:PRES?
+    + :MEAS:PRES:SMAX?
+    + :MEAS:PRES:SMIN?
+    + :MEAS:PRES:SCUR?
+    + :MEAS:PRES:SCUR?
+    + :MEAS:PRES:SAV?
+    + :MEAS:PRES:DEV?
+*** MEAS:PWID?
+    + :MEAS:PWID:SMAX?
+    + :MEAS:PWID:SMIN?
+    + :MEAS:PWID:SCUR?
+    + :MEAS:PWID:SCUR?
+    + :MEAS:PWID:SAV?
+    + :MEAS:PWID:DEV?
+*** MEAS:RTIM?
+    + :MEAS:RTIM:SMAX?
+    + :MEAS:RTIM:SMIN?
+    + :MEAS:RTIM:SCUR?
+    + :MEAS:RTIM:SCUR?
+    + :MEAS:RTIM:SAV?
+    + :MEAS:RTIM:DEV?
+*** MEAS:RDEL?
+    + :MEAS:RDEL:SMAX?
+    + :MEAS:RDEL:SMIN?
+    + :MEAS:RDEL:SCUR?
+    + :MEAS:RDEL:SCUR?
+    + :MEAS:RDEL:SAV?
+    + :MEAS:RDEL:DEV?
+*** MEAS:RPH?
+    + :MEAS:RPH:SMAX?
+    + :MEAS:RPH:SMIN?
+    + :MEAS:RPH:SCUR?
+    + :MEAS:RPH:SCUR?
+    + :MEAS:RPH:SAV?
+    + :MEAS:RPH:DEV?
+*** MEAS:VAMP?
+    + :MEAS:VAMP:SMAX?
+    + :MEAS:VAMP:SMIN?
+    + :MEAS:VAMP:SCUR?
+    + :MEAS:VAMP:SCUR?
+    + :MEAS:VAMP:SAV?
+    + :MEAS:VAMP:DEV?
+*** MEAS:VAVG?
+    + :MEAS:VAVG:SMAX?
+    + :MEAS:VAVG:SMIN?
+    + :MEAS:VAVG:SCUR?
+    + :MEAS:VAVG:SCUR?
+    + :MEAS:VAVG:SAV?
+    + :MEAS:VAVG:DEV?
+*** MEAS:VBAS?
+    + :MEAS:VBAS:SMAX?
+    + :MEAS:VBAS:SMIN?
+    + :MEAS:VBAS:SCUR?
+    + :MEAS:VBAS:SCUR?
+    + :MEAS:VBAS:SAV?
+    + :MEAS:VBAS:DEV?
+*** MEAS:VMAX?
+    + :MEAS:VMAX:SMAX?
+    + :MEAS:VMAX:SMIN?
+    + :MEAS:VMAX:SCUR?
+    + :MEAS:VMAX:SCUR?
+    + :MEAS:VMAX:SAV?
+    + :MEAS:VMAX:DEV?
+*** MEAS:VMIN?
+    + :MEAS:VMIN:SMAX?
+    + :MEAS:VMIN:SMIN?
+    + :MEAS:VMIN:SCUR?
+    + :MEAS:VMIN:SCUR?
+    + :MEAS:VMIN:SAV?
+    + :MEAS:VMIN:DEV?
+*** MEAS:VPP?
+    + :MEAS:VPP:SMAX?
+    + :MEAS:VPP:SMIN?
+    + :MEAS:VPP:SCUR?
+    + :MEAS:VPP:SCUR?
+    + :MEAS:VPP:SAV?
+    + :MEAS:VPP:DEV?
+*** MEAS:VRMS?
+    + :MEAS:VRMS:SMAX?
+    + :MEAS:VRMS:SMIN?
+    + :MEAS:VRMS:SCUR?
+    + :MEAS:VRMS:SCUR?
+    + :MEAS:VRMS:SAV?
+    + :MEAS:VRMS:DEV?
+*** MEAS:VTOP?
+    + :MEAS:VTOP:SMAX?
+    + :MEAS:VTOP:SMIN?
+    + :MEAS:VTOP:SCUR?
+    + :MEAS:VTOP:SCUR?
+    + :MEAS:VTOP:SAV?
+    + :MEAS:VTOP:DEV?
+** System subsystem
+   + :System commands are NOT supported
+** TIMebase subsystem
+   + :TIM:DEL:ENAB ON|OFF
+   + :TIM:DEL:OFFS <offset>
+   + :TIM:DEL:SCAL <scale_value>
+   + :TIM:OFFS     <offset>
+   + :TIM:SCAL     <scale_value>
+   + :TIM:MODE     MAIN|XY|ROLL 
+   + :TIM:HREF:MODE CENT|TPOS|USER
+   + :TIM:HREF:POS  <pos>
+   + :TIM:VERN      ON|OFF
+** Trigger Subsystem
+   + :TRIG:MODE EDGE|PULS|RUNT|WIND|NEDG|SLOP|VID|PATT|DEL|TIM|DURAT|SHOL|RS232|IIC|SPI|USB
+   + :TRIG:COUP AC|DC|LFR|HFR
+   + :TRIG:STAT?
+   + :TRIG:SWE <sweep>
+   + :TRIG:HOLD <value>
+   + :TRIG:NREJ ON|OFF
+*** TRIG:EDG
+    + :TRIG:EDG:SOUR CHAN1|CHAN2|EXT|ACL
+    + :TRIG:EDG:SLOP POS|NEG|RFALI
+    + :TRIG:EDG:LEV <level>
+*** TRIG:PULS
+    + :TRIG:PULS:SOUR CHAN1|CHAN2
+    + :TRIG:PULS:WHEN PGR|PLES|NGR|NLES|PGL|NGL
+    + :TRIG:PULS:UWID <width>
+    + :TRIG:PULS:LWID <width>
+    + :TRIG:PULS:LEV  <level>
+*** TRIG:RUNT
+    + :TRIG:RUNT:SOUR CHAN1|CHAN2
+    + :TRIG:RUNT:POL  POS|NEG
+    + :TRIG:RUNT:WHEN NONE|GRE|LESS|GLES
+    + :TRIG:RUNT:WLOW <NR3>
+    + :TRIG:RUNT:WUPP <NR3>
+    + :TRIG:RUNT:ALEV <level>
+    + :TRIG:RUNT:BLEV <level>
+*** TRIG:WIND
+    + :TRIG:WID:SOUR CHAN1|CHAN2
+    + :TRIG:WID:SLOP POS|NEG|REALI
+    + :TRIG:WID:POS  EXIT|ENTER|TIM
+    + :TRIG:WID:TIM  <NR3>
+*** TRIG:NEDG
+    + :TRIG:NEDG:SOUR CHAN1|CHAN2
+    + :TRIG:NEDG:SLOP POS|NEG
+    + :TRIG:NEDG:IDLE <NR3>
+    + :TRIG:NEDG:EDGE <NR1>
+    + :TRIG:NEDG:LEV  <level>
+*** TRIG:SLOP
+    + :TRIG:SLOP:SOUR CHAN1|CHAN2
+    + :TRIG:SLOP:WHEN PGR|PLES|NGR|NLES|PGL|NGL
+    + :TRIG:SLOP:TUPP <upper>
+    + :TRIG:SLOP:TLOW <lower>
+    + :TRIG:SLOP:WIND TA|TB|TAB
+    + :TRIG:SLOP:ALEV <level>
+    + :TRIG:SLOP:BLEV <level>
+*** TRIG:VID
+    + :TRIG:VID:SOUR CHAN1|CHAN2
+    + :TRIG:VID:SLOP POS|NEG
+    + :TRIG:VID:MOD  ODDF|EVEN|LINE|ALIN
+    + :TRIG:VID:LINE <line>
+    + :TRIG:VID:STAN PALS|NTSC|480P|576P|720P60HZ|720P50HZ|720P30HZ|720P25HZ|720P24HZ|1080P60HZ|1080P50HZ|1080P30HZ|1080P25HZ|1080P24HZ|1080I30HZ|1080PI25HZ|1080I24HZ
+    + :TRIG:VID:LEV  <level>
+*** TRIG:PATT
+    + :TRIG:PATT:PATT <pattern>
+    + :TRIG:PULS:LEV  <level>
+*** TRIG:DEL
+    + :TRIG:DEL:SA    CHAN1|CHAN2
+    + :TRIG:DEL:SLOPA POS|NEG
+    + :TRIG:DEL:SB    CHAN1|CHAN2
+    + :TRIG:DEL:SLOPB POS|NEG
+    + :TRIG:DEL:DEL:TYP <type>
+    + :TRIG:DEL:DEL:TUPP <NR3>
+    + :TRIG:DEL:DEL:TLOW <NR3>
+*** TRIG:TIM
+    + :TRIG:TIM:SOUR CHAN1|CHAN2
+    + :TRIG:TIM:SLOP POS|NEG|RFALI
+    + :TRIG:TIM:TIM  <time>
+*** TRIG:DURA
+    + :TRIG:DURA:SOUR CHAN1|CHAN2
+    + :TRIG:DURA:TYP  H|L|X
+    + :TRIG:DURA:WHEN GRE|LESS|GLES
+    + :TRIG:DURA:TUPP <NR3>
+    + :TRIG:DURA:TLOW <NR3>
+*** TRIG:SHOL
+    + :TRIG:SHOL:DS CHAN1|CHAN2
+    + :TRIG:SHOL:CS CHAN1|CHAN2
+    + :TRIG:SHOL:SLOP POS|NEG
+    + :TRIG:SHOL:PATT H|L
+    + :TRIG:SHOL:TYP  <type>
+    + :TRIG:SHOL:STIM <NR3>
+    + :TRIG:SHOL:HTIM <NR3>
+*** TRIG:RS232
+    + :TRIG:RS232:SOUR CHAN1|CHAN2
+    + :TRIG:RS232:WHEN STAR|ERR|PAR|DATA
+    + :TRIG:RS232:PAR  <parity>
+    + :TRIG:RS232:STOP 1|2
+    + :TRIG:RS232:DATA <data>
+    + :TRIG:RS232:WIDT <width>
+    + :TRIG:RS232:BAUD <baud_rate>
+    + :TRIG:RS232:BUS  <user_baud>
+    + :TRIG:RS232:LEV  <level>
+*** TRIG:IIC
+    + :TRIG:IIC:SCL  CHAN1|CHAN2
+    + :TRIG:IIC:SDA  CHAN1|CHAN2
+    + :TRIG:IIC:WHEN STAR|REST|STOP|NACK|ADDR|DATA|ADAT
+    + :TRIG:IIC:AWID 7|8|10
+    + :TRIG:IIC:ADDR <addr>
+    + :TRIG:IIC:DIR  READ|WRIT|RWR
+    + :TRIG:IIC:DATA <dat>
+    + :TRIG:IIC:CLEV <level>
+    + :TRIG:IIC:DLEV <level>
+*** TRIG:SPI
+    + :TRIG:SPI:SCL  CHAN1|CHAN2
+    + :TRIG:SPI:SDA  CHAN1|CHAN2
+    + :TRIG:SPI:WIDT <width>
+    + :TRIG:SPI:DATA <dat>
+    + :TRIG:SPI:TIM  <time_value>
+    + :TRIG:SPI:SLOP POS|NEG
+    + :TRIG:SPI:CLEV <level>
+    + :TRIG:SPI:DLEV <level>
+*** TRIG:USB
+    + :TRIG:USB:DPL  CHAN1|CHAN2
+    + :TRIG:USB:DMIN CHAN1|CHAN2
+    + :TRIG:USB:SPE  LOW|FULL
+    + :TRIG:USB:POL  POS|NEG
+    + :TRIG:USB:WHEN SOP|EOP|RC|SUSP|EXIT
+    + :TRIG:USB:PLEV <level>
+    + :TRIG:USB:MPLEV <level>
+** Waveform Subsystem
+   + :WAV:SOUR    CHAN1|CHAN2
+   + :WAV:MODE    NORM|MAX|RAW
+   + :WAV:FORM    WORD|BYTE|ASCII
+   + :WAV:POIN    <point>
+   + :WAV:DATA?
+   + :WAV:XINC?
+   + :WAV:XOR      
+   + :WAV:XREF?      
+   + :WAV:YINC?      
+   + :WAV:YOR? 
+   + :WAV:YREF 
+   + :WAV:STAR    <sta> 
+   + :WAV:STOP    <sta>
+   + :WAV:BEG  
+   + :WAV:END
+   + :WAV:RES  
+   + :WAV:PRE  
+   + :WAV:STAT?  
+
+
+   
+
+
+
+
+
+
+
+* 6000 Series Command summary
+** Acquire Subsystem
+   + :ACQ:AVER  <count>
+   + :ACQ:MDEP  AUTO|14000|140000|1400000|14000000|56000000|7000|70000|700000|7000000|28000000
+   + :ACQ:SRAT? 
+   + :ACQ:MODE  RTIM|ETIM 
+   + :ACQ:TYPE  NORM|AVER|PEAK|HRES
+** Bus Subsystem
+   + :BUS[1|2]:DISP ON|OFF 
+   + :BUS[1|2]:FORM HEX|DEC|BIN|ASCII
+   + :BUS[1|2]:MODE PAR|RS232|IIC|SPI
+*** BUS:IIC
+    + :BUS[1|2]:IIC:OFFS <val>
+    + :BUS[1|2]:IIC:SCLK:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:IIC:SCLK:THR <thre>
+    + :BUS[1|2]:IIC:SDA:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:IIC:SDA:THR <thre>
+*** BUS:PAR
+    + :BUS[1|2]:PAR:BEST <channel_string>
+    + :BUS[1|2]:PAR:CLK CHAN1|CHAN2|CHAN3|CHAN4|OFF
+    + :BUS[1|2]:PAR:OFFS <val>
+    + :BUS[1|2]:PAR:SLOP POS|NEG|BOTH
+    + :BUS[1|2]:PAR:THR CHAN1|CHAN2|CHAN3|CHAN4, <thre>
+*** BUS:RS232
+    + :BUS[1|2]:RS232:BAUD 2400|4800|9600|19200|38400|57600|115200|USER
+    + :BUS[1|2]:RS232:DBIT 5|6|7|8|9
+    + :BUS[1|2]:RS232:END MSB|LSB
+    + :BUS[1|2]:RS232:OFFS <val>
+    + :BUS[1|2]:RS232:BUS <baud>
+    + :BUS[1|2]:RS232:PACK ON|OFF
+    + :BUS[1|2]:RS232:PAR NONE|ODD|EVEN
+    + :BUS[1|2]:RS232:PEND NULL|LF|CR|SP|FF
+    + :BUS[1|2]:RS232:POL POS|NEG
+    + :BUS[1|2]:RS232:RTHR <rthre>
+    + :BUS[1|2]:RS232:RX CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:RS232:SBIT 1|1.5|2
+    + :BUS[1|2]:RS232:TTHR <tthre>
+    + :BUS[1|2]:RS232:TX CHAN1|CHAN2|CHAN3|CHAN4
+*** BUS:SPI
+    + :BUS[1|2]:SPI:DBIT <width>
+    + :BUS[1|2]:SPI:END  <endian>
+    + :BUS[1|2]:SPI:MISO:POL <pos>
+    + :BUS[1|2]:SPI:MISO:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:SPI:MISO:THR  <thre>
+    + :BUS[1|2]:SPI:MOSI:POL <pos>
+    + :BUS[1|2]:SPI:MOSI:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:SPI:MOSI:THR  <thre>
+    + :BUS[1|2]:SPI:OFFS <val>
+    + :BUS[1|2]:SPI:SCLK:POL <pos>
+    + :BUS[1|2]:SPI:SCLK:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:SPI:SCLK:THR  <thre>
+    + :BUS[1|2]:SPI:SS:POL <pos>
+    + :BUS[1|2]:SPI:SS:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:SPI:SS:THR  <thre>
+** Calculate Subsystem
+   + :CALC:MODE ADD|SUB|MULT|DIV|FFT|LOG|SDV|OFF
+*** CALC:ADD
+    + :CALC:ADD:SA CHAN1|CHAN2
+    + :CALC:ADD:SB CHAN1|CHAN2
+    + :CALC:ADD:INV ON|OFF
+    + :CALC:ADD:VSC <scale>
+    + :CALC:ADD:VOFF <offs>
+*** CALC:SUB
+    + :CALC:SUB:SA CHAN1|CHAN2
+    + :CALC:SUB:SB CHAN1|CHAN2
+    + :CALC:SUB:INV ON|OFF
+    + :CALC:SUB:VSC <scale>
+    + :CALC:SUB:VOFF <offs>
+*** CALC:MULT
+    + :CALC:MULT:SA CHAN1|CHAN2
+    + :CALC:MULT:SB CHAN1|CHAN2
+    + :CALC:MULT:INV ON|OFF
+    + :CALC:MULT:VSC <scale>
+    + :CALC:MULT:VOFF <offs>
+*** CALC:DIV
+    + :CALC:DIV:SA CHAN1|CHAN2
+    + :CALC:DIV:SB CHAN1|CHAN2
+    + :CALC:DIV:INV ON|OFF
+    + :CALC:DIV:VSC <scale>
+    + :CALC:DIV:VOFF <offs>
+*** CALC:LOG
+    + :CALC:LOG:SA CHAN1|CHAN2
+    + :CALC:LOG:SB CHAN1|CHAN2
+    + :CALC:LOG:INV ON|OFF
+    + :CALC:LOG:VSC <scale>
+    + :CALC:LOG:VOFF <offs>
+    + :CALC:LOG:OPER AND|OR|NOT|XOR    
+    + :CALC:LOG:ATHR <thre>    
+    + :CALC:LOG:BTHR <thre>          
+*** CALC:ADV
+    + :CALC:ADV:EXPR <expression>
+    + :CALC:ADV:INV ON|OFF
+    + :CALC:ADV:VAR1 <numeric_value>
+    + :CALC:ADV:VAR2 <numeric_value>     
+    + :CALC:ADV:VSC <scale>
+    + :CALC:ADV:VOFF <offs>
+** Channel Subsystem
+   + :CHAN[1|2|3|4]:BWL 20M|100M|200M|OFF
+   + :CHAN[1|2|3|4]:COUP AC|DC|GND
+   + :CHAN[1|2|3|4]:DISP ON|OFF
+   + :CHAN[1|2|3|4]:IMP  OMEG|FIFT
+   + :CHAN[1|2|3|4]:INV  ON|OFF
+   + :CHAN[1|2|3|4]:OFFS <offset>
+   + :CHAN[1|2|3|4]:PROB 0.01|0.02|0.05|0.1|0.2|0.5|1|2|5|10|20|50|100|200|500|1000
+   + :CHAN[1|2|3|4]:SCAL <scale>
+   + :CHAN[1|2|3|4]:TYPE?
+   + :CHAN[1|2|3|4]:UNIT VOLT|WATT|AMP|UNKN
+   + :CHAN[1|2|3|4]:VERN ON|OFF      
+** Cursor Subsystem
+   + :Cursor Subystem is not supported
+     
+   + :CURS:MODE OFF|MAN|TRAC|AUTO
+   + :CURS:MAN:TYPE TIME|AMPL
+   + :CURS:MAN:SOUR CHAN1|CHAN2|MATH|NONE
+   + :CURS:MAN:TUN SEC|HZ|PERC|DEGR
+   + :CURS:MAN:VUN SUN|PERC
+   + :CURS:MAN:CAX <ax>
+   + :CURS:MAN:CBX <bx>
+   + :CURS:MAN:CAY <ay>
+   + :CURS:MAN:CBY <by>
+   + :CURS:MAN:AXV?
+   + :CURS:MAN:AYV?
+   + :CURS:MAN:BXV?
+   + :CURS:MAN:BYV?
+   + :CURS:MAN:XDEL?
+   + :CURS:MAN:IXD?
+   + :CURS:MAN:YDEL?
+     
+   + :CURS:TRAC:SOUR1 CHAN1|CHAN2|MATH|NONE
+   + :CURS:TRAC:SOUR2 CHAN1|CHAN2|MATH|NONE
+   + :CURS:TRAC:CAX <ax>
+   + :CURS:TRAC:CBX <bx>
+   + :CURS:TRAC:CAY <ay>
+   + :CURS:TRAC:CBY <by>
+   + :CURS:TRAC:AXV?
+   + :CURS:TRAC:AYV?
+   + :CURS:TRAC:BXV?
+   + :CURS:TRAC:BYV?
+   + :CURS:TRAC:XDEL?
+   + :CURS:TRAC:IXD?
+   + :CURS:TRAC:YDEL?
+** Display Sbusystem
+   + :Display commands are NOT supported
+** Function Subsystem
+   + :FUNC:WRM OFF|REC|KEEP|PLAY|ANAL
+*** FUNC:WREC
+    + :FUNC:WREC:FEND <frame>
+    + :FUNC:WREC:FMAX?
+    + :FUNC:WREC:INT <interval>
+    + :FUNC:WREC:OPER REC|STOP
+*** FUNC:WREP
+    + :FUNC:WREP:FCUR <frame>
+    + :FUNC:WREP:FEND <frame>
+    + :FUNC:WREP:FMAX?
+    + :FUNC:WREP:FST <frame>
+    + :FUNC:WREP:INT <interval>
+    + :FUNC:WREP:MODE REP|SING
+    + :FUNC:WREP:OPER PLAY|STOP|PAUS
+** LAN Subsystem
+   + :Lan commands are not supported
+** Mask Subsystem
+   + :MASK:CRE  
+   + :MASK:DATA <mask>
+   + :MASK:ENAB ON|OFF
+   + :MASK:FAIL?
+   + :MASK:MDIS ON|OFF
+   + :MASK:OPER RUN|STOP
+   + :MASK:OUTP FAIL|FSO
+   + :MASK:PASS?
+   + :MASK:RES
+   + :MASK:SOO  ON|OFF
+   + :MASK:SOUR CHAN1|CHAN2
+   + :MASK:TOT?
+   + :MASK:X    <x>
+   + :MASK:Y    <y>
+** Measure Subsystem
+   + :MEAS:ADIS  ON|OFF
+   + :MEAS:AREA  SCR|CREG
+   + :MEAS:CLE   ITEM1|ITEM2|ITEM3|ITEM4|ITEM5|ALL
+   + :MEAS:REC
+   + :MEAS:SOUR  CHAN1|CHAN2|CHAN3|CHAN4
+    + :MEAS:AMS   CHAN1|CHAN2|CHAN3|CHAN4
+    + :MEAS:HIST:DISP ON|OFF
+    + :MEAS:HIST:DMOD TABL|GRAP
+    + :MEAS:SET:MAX <value>
+    + :MEAS:SET:MID <value>
+    + :MEAS:SET:MIN <value>
+    + :MEAS:SET:TYPE DEL|PHAS|THR
+    + :MEAS:STAT:DIS:P ON|OFF
+    + :MEAS:STAT:RES
+    + :MEAS:STAT:MODE DIFF|EXTR
+*** MEAS:COUN     
+    + :MEAS:COUN:SOUR Chan1|CHAN2|CHAN3|CHAN4|OFF
+    + :MEAS:COUN:VAL?
+*** MEAS:CREG     
+    + :MEAS:CREG:CAX <val>
+    + :MEAS:CREG:CBX <val>
+*** MEAS:FDEL
+    + :MEAS:FDEL?
+    + :MEAS:FDEL:SAV?
+    + :MEAS:FDEL:SCUR?
+    + :MEAS:FDEL:SMAX?
+    + :MEAS:FDEL:SMIN?
+*** MEAS:FPH
+    + :MEAS:FPH?
+    + :MEAS:FPH:SAV?
+    + :MEAS:FPH:SCUR?
+    + :MEAS:FPH:SMAX?
+    + :MEAS:FPH:SMIN?
+*** MEAS:FREQ
+    + :MEAS:FREQ?
+    + :MEAS:FREQ:SAV?
+    + :MEAS:FREQ:SCUR?
+    + :MEAS:FREQ:SMAX?
+    + :MEAS:FREQ:SMIN?
+*** MEAS:FTIM
+    + :MEAS:FTIM?
+    + :MEAS:FTIM:SAV?
+    + :MEAS:FTIM:SCUR?
+    + :MEAS:FTIM:SMAX?
+    + :MEAS:FTIM:SMIN?
+*** MEAS:HIST
+    + :MEAS:HIST:DISP ON|OFF
+    + :MEAS:HIST:DMOD TABL|GRAP
+*** MEAS:NDUT?
+    + :MEAS:NDUT:SMAX?
+    + :MEAS:NDUT:SMIN?
+    + :MEAS:NDUT:SCUR?
+    + :MEAS:NDUT:SCUR?
+    + :MEAS:NDUT:SAV?
+    + :MEAS:NDUT:DEV?
+*** MEAS:NWID
+    + :MEAS:NWID:SMAX?
+    + :MEAS:NWID:SMIN?
+    + :MEAS:NWID:SCUR?
+    + :MEAS:NWID:SCUR?
+    + :MEAS:NWID:SAV?
+    + :MEAS:NWID:DEV?
+*** MEAS:OVER
+    + :MEAS:OVER:SMAX?
+    + :MEAS:OVER:SMIN?
+    + :MEAS:OVER:SCUR?
+    + :MEAS:OVER:SCUR?
+    + :MEAS:OVER:SAV?
+    + :MEAS:OVER:DEV?
+*** MEAS:PDUT
+    + :MEAS:PDUT:SMAX?
+    + :MEAS:PDUT:SMIN?
+    + :MEAS:PDUT:SCUR?
+    + :MEAS:PDUT:SCUR?
+    + :MEAS:PDUT:SAV?
+    + :MEAS:PDUT:DEV?
+*** MEAS:PER
+    + :MEAS:PER:SMAX?
+    + :MEAS:PER:SMIN?
+    + :MEAS:PER:SCUR?
+    + :MEAS:PER:SCUR?
+    + :MEAS:PER:SAV?
+    + :MEAS:PER:DEV?
+*** MEAS:PRE
+    + :MEAS:PRE:SMAX?
+    + :MEAS:PRE:SMIN?
+    + :MEAS:PRE:SCUR?
+    + :MEAS:PRE:SCUR?
+    + :MEAS:PRE:SAV?
+    + :MEAS:PRE:DEV?
+*** MEAS:PWID
+    + :MEAS:PWID:SMAX?
+    + :MEAS:PWID:SMIN?
+    + :MEAS:PWID:SCUR?
+    + :MEAS:PWID:SCUR?
+    + :MEAS:PWID:SAV?
+    + :MEAS:PWID:DEV?
+*** MEAS:RDEL
+    + :MEAS:RDEL:SMAX?
+    + :MEAS:RDEL:SMIN?
+    + :MEAS:RDEL:SCUR?
+    + :MEAS:RDEL:SCUR?
+    + :MEAS:RDEL:SAV?
+    + :MEAS:RDEL:DEV?
+*** MEAS:RPH
+    + :MEAS:RPH:SMAX?
+    + :MEAS:RPH:SMIN?
+    + :MEAS:RPH:SCUR?
+    + :MEAS:RPH:SCUR?
+    + :MEAS:RPH:SAV?
+    + :MEAS:RPH:DEV?
+*** MEAS:RTIM
+    + :MEAS:RTIM:SMAX?
+    + :MEAS:RTIM:SMIN?
+    + :MEAS:RTIM:SCUR?
+    + :MEAS:RTIM:SCUR?
+    + :MEAS:RTIM:SAV?
+    + :MEAS:RTIM:DEV?
+*** MEAS:SET
+    + :MEAS:SET:SMAX?
+    + :MEAS:SET:SMIN?
+    + :MEAS:SET:SCUR?
+    + :MEAS:SET:SCUR?
+    + :MEAS:SET:SAV?
+    + :MEAS:SET:DEV?
+*** MEAS:STAT
+    + :MEAS:STAT:DISP ON|OFF
+    + :MEAS:STAT:RES
+*** MEAS:VAMP
+    + :MEAS:VAMP:SMAX?
+    + :MEAS:VAMP:SMIN?
+    + :MEAS:VAMP:SCUR?
+    + :MEAS:VAMP:SCUR?
+    + :MEAS:VAMP:SAV?
+    + :MEAS:VAMP:DEV?
+*** MEAS:VAVG
+    + :MEAS:VAVG:SMAX?
+    + :MEAS:VAVG:SMIN?
+    + :MEAS:VAVG:SCUR?
+    + :MEAS:VAVG:SCUR?
+    + :MEAS:VAVG:SAV?
+    + :MEAS:VAVG:DEV?
+*** MEAS:VBAS
+    + :MEAS:VBAS:SMAX?
+    + :MEAS:VBAS:SMIN?
+    + :MEAS:VBAS:SCUR?
+    + :MEAS:VBAS:SCUR?
+    + :MEAS:VBAS:SAV?
+    + :MEAS:VBAS:DEV?
+*** MEAS:VMAX
+    + :MEAS:VMAX:SMAX?
+    + :MEAS:VMAX:SMIN?
+    + :MEAS:VMAX:SCUR?
+    + :MEAS:VMAX:SCUR?
+    + :MEAS:VMAX:SAV?
+    + :MEAS:VMAX:DEV?
+*** MEAS:VMIN
+    + :MEAS:VMIN:SMAX?
+    + :MEAS:VMIN:SMIN?
+    + :MEAS:VMIN:SCUR?
+    + :MEAS:VMIN:SCUR?
+    + :MEAS:VMIN:SAV?
+    + :MEAS:VMIN:DEV?
+*** MEAS:VPP
+    + :MEAS:VPP:SMAX?
+    + :MEAS:VPP:SMIN?
+    + :MEAS:VPP:SCUR?
+    + :MEAS:VPP:SCUR?
+    + :MEAS:VPP:SAV?
+    + :MEAS:VPP:DEV?
+*** MEAS:VRMS
+    + :MEAS:VRMS:SMAX?
+    + :MEAS:VRMS:SMIN?
+    + :MEAS:VRMS:SCUR?
+    + :MEAS:VRMS:SCUR?
+    + :MEAS:VRMS:SAV?
+    + :MEAS:VRMS:DEV?
+*** MEAS:VTOP
+    + :MEAS:VTOP:SMAX?
+    + :MEAS:VTOP:SMIN?
+    + :MEAS:VTOP:SCUR?
+    + :MEAS:VTOP:SCUR?
+    + :MEAS:VTOP:SAV?
+    + :MEAS:VTOP:DEV?
+** System subsystem
+   + :System commands are NOT supported
+** TIMebase subsystem
+   + :TIM:DEL:ENAB ON|OFF
+   + :TIM:DEL:OFFS <offset>
+   + :TIM:DEL:SCAL <scale_value>
+   + :TIM:HREF:MODE CENT|TPOS|USER
+   + :TIM:HREF:POS  <pos>
+   + :TIM:MODE     MAIN|XY|ROLL 
+   + :TIM:VERN      ON|OFF
+   + :TIM:XY1:DISP  ON|OFF
+   + :TIM:XY2:DISP  ON|OFF
+   + :TIM:OFFS     <offset>
+   + :TIM:SCAL     <scale_value>
+** Trigger Subsystem
+   + :TRIG:COUP AC|DC|LFR|HFR
+   + :TRIG:HOLD <value>
+   + :TRIG:MODE EDGE|PULS|RUNT|WIND|NEDG|SLOP|VID|PATT|DEL|TIM|DURAT|SHOL|RS232|IIC|SPI|USB
+   + :TRIG:STAT?
+   + :TRIG:SWE <sweep>
+*** TRIG:CAN
+    + :TRIG:CAN:BAUD 10000|20000|33300|50000|62500|83300|100000|125000|250000|500000|800000|1000000
+    + :TRIG:CAN:BUS  <user_baud>
+    + :TRIG:CAN:FIYP DATA|REM|ERR|OVER
+    + :TRIG:CAN:LEV  <level>
+    + :TRIG:CAN:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :TRIG:CAN:SPO  <samp_point>
+    + :TRIG:CAN:STYP H|L|RX|TX|DIFF
+    + :TRIG:CAN:TRIG SOF|EOF|FTYP
+*** TRIG:EDG
+    + :TRIG:EDG:LEV <level>
+    + :TRIG:EDG:SLOP POS|NEG|RFALI
+    + :TRIG:EDG:SOUR CHAN1|CHAN2|EXT|ACL
+*** TRIG:IIC
+    + :TRIG:IIC:ABIT 7|10
+    + :TRIG:IIC:ADDR <addr>
+    + :TRIG:IIC:CLEV <level>
+    + :TRIG:IIC:DATA <dat>
+    + :TRIG:IIC:DIR  READ|WRIT|RWR
+    + :TRIG:IIC:DLEV <level>
+    + :TRIG:IIC:QUAL EQU|GRE|LESS
+    + :TRIG:IIC:SCL  CHAN1|CHAN2|CHAN3|CHAN4
+    + :TRIG:IIC:SDA  CHAN1|CHAN2|CHAN3|CHAN4
+    + :TRIG:IIC:WHEN STAR|REST|STOP|NACK|ADDR|DATA|ADAT
+*** TRIG:PATT
+    + :TRIG:PATT:PATT <pattern>
+    + :TRIG:PULS:LEV  <level>
+*** TRIG:RS232
+    + :TRIG:RS232:BAUD <baud_rate>
+    + :TRIG:RS232:BUS  <user_baud>
+    + :TRIG:RS232:DATA <data>
+    + :TRIG:RS232:LEV  <level>
+    + :TRIG:RS232:PAR  <parity>
+    + :TRIG:RS232:SOUR CHAN1|CHAN2
+    + :TRIG:RS232:STOP 1|2
+    + :TRIG:RS232:WHEN STAR|ERR|PAR|DATA
+    + :TRIG:RS232:WIDT <width>
+*** TRIG:SLOP
+    + :TRIG:SLOP:ALEV <level>
+    + :TRIG:SLOP:BLEV <level>
+    + :TRIG:SLOP:SOUR CHAN1|CHAN2|CHAN3|CHAN4|EXT|EXT5
+    + :TRIG:SLOP:TLOW <lower>
+    + :TRIG:SLOP:TUPP <upper>
+    + :TRIG:SLOP:WHEN PGR|PLES|NGR|NLES|PGL|NGL
+    + :TRIG:SLOP:WIND TA|TB|TAB
+*** TRIG:SPI
+    + :TRIG:SPI:CLEV <level>
+    + :TRIG:SPI:DATA <dat>
+    + :TRIG:SPI:DLEV <level>
+    + :TRIG:SPI:MODE HIGH|LOW
+    + :TRIG:SPI:SCL  CHAN1|CHAN2|CHAN3|CHAN4
+    + :TRIG:SPI:SDA  CHAN1|CHAN2|CHAN3|CHAN4
+    + :TRIG:SPI:SLEV <level>
+    + :TRIG:SPI:SLOP POS|NEG
+    + :TRIG:SPI:TIM  <time_value>
+    + :TRIG:SPI:WIDT <width>
+*** TRIG:USB
+    + :TRIG:USB:DMIN CHAN1|CHAN2
+    + :TRIG:USB:DPL  CHAN1|CHAN2
+    + :TRIG:USB:MPLEV <level>
+    + :TRIG:USB:PLEV <level>
+    + :TRIG:USB:SPE  LOW|FULL
+    + :TRIG:USB:TRIG SOP|EOP|RC|SUSP|EXIT
+*** TRIG:VID
+    + :TRIG:VID:LEV  <level>
+    + :TRIG:VID:LINE <line>
+    + :TRIG:VID:MOD  ODDF|EVEN|LINE|ALIN
+    + :TRIG:VID:POL  POS|NEG
+    + :TRIG:VID:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :TRIG:VID:STAN PALS|NTSC
+** Waveform Subsystem
+   + :WAV:SOUR    CHAN1|CHAN2
+   + :WAV:MODE    NORM|MAX|RAW
+   + :WAV:FORM    WORD|BYTE|ASCII
+   + :WAV:POIN    <point>
+   + :WAV:DATA?
+   + :WAV:XINC?
+   + :WAV:XOR      
+   + :WAV:XREF?      
+   + :WAV:YINC?      
+   + :WAV:YOR? 
+   + :WAV:YREF 
+   + :WAV:STAR    <sta> 
+   + :WAV:STOP    <sta>
+   + :WAV:BEG  
+   + :WAV:END
+   + :WAV:RES  
+   + :WAV:PRE  
+   + :WAV:STAT?  
+
+
+   
+
+
