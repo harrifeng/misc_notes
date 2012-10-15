@@ -1,3 +1,4 @@
+#+OPTIONS: ^:{}
 * 2000 Series Command summary
 ** Acquire Subsystem
    + :ACQ:AVER  <count>
@@ -581,12 +582,12 @@
     + :BUS[1|2]:SPI:SS:SOUR CHAN1|CHAN2|CHAN3|CHAN4
     + :BUS[1|2]:SPI:SS:THR  <thre>
 *** BUS:CAN
-    + :BUS[1|2]:CAN:SOUR CHAN1|CHAN2|CHAN3|CHAN4
-    + :BUS[1|2]:CAN:STYP CHAN|CANL|DIFF
-    + :BUS[1|2]:CAN:BAUD 100000|125000|250000|400000|500000|800000|1000000|USER
-    + :BUS[1|2]:CAN:SP   <spo>
-    + :BUS[1|2]:CAN:PACK ON|OFF
-    + :BUS[1|2]:CAN:THR  <thre>
+    + :BUS[1|2]:FLEX:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :BUS[1|2]:FLEX:STYP CHAN|CANL|DIFF
+    + :BUS[1|2]:FLEX:BAUD 100000|125000|250000|400000|500000|800000|1000000|USER
+    + :BUS[1|2]:FLEX:SP   <spo>
+    + :BUS[1|2]:FLEX:PACK ON|OFF
+    + :BUS[1|2]:FLEX:THR  <thre>
 ** Calculate Subsystem
    + :CALC:MODE ADD|SUB|MULT|DIV|FFT|LOG|SDV|OFF
 *** CALC:ADD
@@ -629,6 +630,17 @@
     + :CALC:ADV:VAR2 <numeric_value>     
     + :CALC:ADV:VSC <scale>
     + :CALC:ADV:VOFF <offs>
+*** CALC:FFT
+    + :CALC:FFT:HCEN <center>
+    + :CALC:FFT:HOFF <offs>
+    + :CALC:FFT:HSC  1|2|3|4
+    + :CALC:FFT:HSP  <span>
+    + :CALC:FFT:SOUR CHAN1|CHAN2|CHAN3|CHAN4
+    + :CALC:FFT:SPL  <offs>
+    + :CALC:FFT:VSC  <vscale>
+    + :CALC:FFT:VSM  VRMS|DBVR
+    + :CALC:FFT:WIND RECT|HANN|HAMM|BLAC
+
 ** Channel Subsystem
    + :CHAN[1|2|3|4]:BWL 20M|100M|200M|OFF
    + :CHAN[1|2|3|4]:COUP AC|DC|GND
@@ -1027,12 +1039,6 @@
 
 
    
-
-
-
-
-
-
 
 * 6000 Series Command summary
 ** Acquire Subsystem
