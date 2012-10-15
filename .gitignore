@@ -1,5 +1,6 @@
 # Emacs ignore files
 *~
+*.txt
 
 # Following is the python ignore file
 *.py[co]
