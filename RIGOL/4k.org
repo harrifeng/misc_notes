@@ -1,3 +1,5 @@
+#+OPTIONS: ^:{}
+
 * 4000 Series Command summary
 ** Acquire Subsystem
    + :ACQ:AVER  <count>
