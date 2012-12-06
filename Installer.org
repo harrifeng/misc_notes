@@ -1,0 +1,27 @@
+* MSI
+  + MSI 有一个基准的feature,比如是100, 只有当一个feature的value小于这个数字的时候,
+    才会被安装
+  + Feature下面是分成多个component的, component都有一个ID
+  + 一个component下面会有多个文件, 只能对应一个directory
+  + FeatureComponents来展示对应关系.
+  + Feature安装,所对应的component都会被安装
+  + windows 的directory会有特定的字段, 比如SystemFolder, NI自己也会提供不同的字符
+  + File表,表示实际包含的文件.
+  + FileName前面的八个字符是不需要了,现在没那么小的文件名限制
+  + 两个文件放在相同的位置, 如何处理两者关系: 如果发现目标位置有相同文件:
+    - Highest Version Wins:先看Highest Version, 最高的都会被安装
+    - Versioned Files Wins:引用计数加1
+    - Favor Product Language.
+  + Property 是基本单位,比如一个文件的ID, Property名字,对应一个PropertyID
+  + Property名字如果全部大写,是可以更改的.如果包含了小写字母,是不能被更改的.
+  + Condition Table, 调整Feature 的level, 在满足某个condition的情况下把某个feature
+    的level改成某个值.Feature Level开始默认不装某个feature. 可以通过这种方式安装成功
+  + 产品有不同版本,安装新版本的时候,老版本的东西都要卸掉.还有如果有了2.0,用户安装1.0
+    也是要有提醒的,这都是通过Upgrade表来实现的.
+  + 我们是major upgrade, 旧的版本都会被卸载掉.
+  + 1.0和2.0的文件我都希望保留.我就使用不同版本的upgrade code
+  + Upgrade里面会通过比较VersionMin VersionMax来确认是否安装某个文件
+  + Environment,环境变量
+  + Registry, 注册表
+    
+    
